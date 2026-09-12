@@ -51,6 +51,22 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
  .dark{padding:62px 18px}.darkinner{grid-template-columns:1fr;gap:15px}.dark h2{font-size:40px}footer{display:block;padding:24px 18px}footer span{display:block;margin-top:7px}.wa{right:10px;bottom:10px;font-size:7px}
 }
 @media(max-width:380px){.occasion-grid button{min-height:52px;font-size:6.5px}.occasion-grid button strong{font-size:13px}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.hero-inner{padding-top:41svh}}
+
+/* REAL SITE IMAGE CARDS */
+.cardimg{position:relative;background-size:cover!important;background-position:center!important;overflow:hidden}
+.cardimg:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.72),rgba(0,0,0,.05) 70%);pointer-events:none}
+.cardimg span{position:relative;z-index:2}
+
+
+.visual-strip{max-width:1180px;margin:0 auto;padding:0 6% 80px;background:#090d10;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.visual-card{height:260px;position:relative;overflow:hidden;border:1px solid rgba(213,173,100,.35);border-radius:15px;background:#111}
+.visual-card img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95)}
+.visual-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.78),rgba(0,0,0,.05) 65%)}
+.visual-card>div{position:absolute;z-index:2;left:18px;right:18px;bottom:17px}
+.visual-card small{display:block;color:#e9c979;font-size:8px;letter-spacing:.22em;margin-bottom:6px}
+.visual-card b{font:500 22px "Playfair Display",serif}
+@media(max-width:650px){.visual-strip{padding:0 18px 55px;grid-template-columns:1fr}.visual-card{height:210px}}
+
 </style>
 </head>
 <body>
@@ -129,6 +145,11 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
 </div>
 </div></section>
 
+<section class="visual-strip">
+<div class="visual-card"><img src="site-birthday.png" alt="Private jet birthday celebration"><div><small>PRIVATE DAYS</small><b>Celebrate above the clouds.</b></div></div>
+<div class="visual-card"><img src="site-proposal.png" alt="Private jet luxury experience"><div><small>SKYLAND PRIVATE</small><b>Moments made extraordinary.</b></div></div>
+<div class="visual-card"><img src="site-celebration.png" alt="Private jet celebration experience"><div><small>YOUR MOMENT</small><b>Designed around you.</b></div></div>
+</section>
 <section class="dark" id="contact"><div class="darkinner">
 <div><div class="kicker">YOUR MOMENT · YOUR FLIGHT</div><h2>Designed around you.<br><i>Down to every detail.</i></h2></div>
 <div><p>From the route to the celebration details, our private aviation team coordinates your experience with discretion, flexibility and personal attention.</p><a class="navcta" href="#quote">START PLANNING →</a></div>
