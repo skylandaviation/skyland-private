@@ -4,146 +4,152 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Skyland Private Days — private jet experiences for birthdays, proposals, anniversaries, honeymoons and special celebrations.">
-<title>Skyland Private Days | Private Jet Experiences</title>
+<title>Skyland Private Days | Special Occasions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--gold:#d4af68;--gold2:#f0d49b;--ink:#080a0b;--cream:#f6f2e9;--muted:#9da1a4}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;background:var(--ink);color:#fff}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
-.hero{min-height:100svh;position:relative;overflow:hidden;background:#090b0c url("special-occasions-bg.png") center/cover no-repeat}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,6,7,.80),rgba(4,6,7,.20) 58%,rgba(4,6,7,.38)),linear-gradient(0deg,rgba(4,6,7,.90),transparent 45%,rgba(4,6,7,.25));pointer-events:none}
-.nav{height:82px;position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 5.5%;border-bottom:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(0,0,0,.30),transparent)}
-.logo{font-family:Manrope;font-weight:800;font-size:20px;letter-spacing:.20em}.logo span{display:block;color:var(--gold);font-size:8px;letter-spacing:.36em;margin-top:5px}
-.navlinks{display:flex;gap:30px;font-size:11px;color:#eee}.navlinks a:first-child{color:var(--gold2)}
-.navright{display:flex;align-items:center;gap:10px}.lang{position:relative}.lang>button{border:1px solid rgba(255,255,255,.22);background:rgba(8,10,11,.45);color:#fff;border-radius:9px;padding:11px 13px;font-size:10px;cursor:pointer}.langmenu{display:none;position:absolute;right:0;top:44px;width:145px;background:#111416;border:1px solid rgba(212,175,104,.4);border-radius:10px;padding:5px;z-index:50}.langmenu.open{display:block}.langmenu button{width:100%;padding:9px;border:0;background:transparent;color:#fff;text-align:left;border-radius:7px;cursor:pointer;font-size:11px}.langmenu button:hover{background:rgba(212,175,104,.12)}
-.navcta,.goldbtn{background:linear-gradient(135deg,#edc87f,#c99b50);color:#111;border:0;border-radius:9px;padding:13px 17px;font-size:10px;font-weight:800;letter-spacing:.08em}
-.hero-inner{position:relative;z-index:5;min-height:100svh;max-width:1380px;margin:auto;padding:120px 5.5% 45px;display:flex;align-items:center;justify-content:space-between;gap:5vw}
-.hero-copy{max-width:530px}.eyebrow{font-size:10px;color:var(--gold2);letter-spacing:.28em;font-weight:800;margin-bottom:15px}.eyebrow:before{content:"";display:inline-block;width:38px;height:1px;background:var(--gold);vertical-align:middle;margin-right:11px}
-.hero h1{font:500 clamp(48px,5.5vw,78px)/.97 "Playfair Display",serif;letter-spacing:-.035em}.hero h1 i{color:var(--gold2)}.hero-copy>p{max-width:500px;color:#e7e5e0;font-size:14px;line-height:1.7;margin:22px 0 24px}
-.occasion-pills{display:flex;flex-wrap:wrap;gap:7px}.pill{padding:8px 10px;border:1px solid rgba(212,175,104,.38);background:rgba(0,0,0,.20);border-radius:999px;font-size:9px;letter-spacing:.08em}
-.form-shell{width:min(570px,44vw);flex:none}.form-card{padding:24px;border:1px solid rgba(235,209,158,.46);border-radius:20px;background:rgba(7,9,10,.83);box-shadow:0 30px 90px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(18px)}
-.formtop{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;margin-bottom:15px}.formtop h2{font:500 29px/1 "Playfair Display",serif}.formtop h2 i{color:var(--gold2)}.formtop small{font-size:9px;line-height:1.5;color:#aaa;text-align:right}
-.trip{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:3px;background:rgba(255,255,255,.06);border-radius:9px;margin-bottom:12px}.trip button{border:0;border-radius:7px;background:transparent;color:#aaa;padding:10px;font-size:10px;font-weight:800;cursor:pointer}.trip button.active{background:var(--gold);color:#111}
-.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field.full{grid-column:1/-1}.field label{display:block;color:#aaa;font-size:9px;letter-spacing:.10em;text-transform:uppercase;margin:0 0 5px 2px;font-weight:700}
-.field input,.field select,.field textarea{width:100%;min-height:45px;border:1px solid rgba(255,255,255,.13);border-radius:8px;background:rgba(255,255,255,.075);color:#fff;padding:0 12px;outline:none;font-size:11px}.field textarea{height:62px;padding:11px 12px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#777}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
-.submit{width:100%;margin-top:12px;min-height:48px;border:0;border-radius:8px;background:linear-gradient(135deg,#edc87f,#c99b50);color:#111;font-weight:900;font-size:10px;letter-spacing:.09em;cursor:pointer}.note{margin-top:9px;text-align:center;color:#999;font-size:8px}.note b{color:#ddd}
-.featurebar{position:relative;z-index:6;max-width:1120px;margin:-10px auto 0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.14);padding:18px 5.5% 25px}.feature{display:flex;align-items:center;justify-content:center;gap:10px;border-right:1px solid rgba(255,255,255,.14)}.feature:last-child{border:0}.feature .ico{font-size:22px;color:var(--gold)}.feature b{display:block;font-size:10px;letter-spacing:.08em}.feature span{display:block;font-size:8px;color:#aaa;margin-top:3px}
-.section{padding:90px 6%;background:var(--cream);color:#151718}.section-inner{max-width:1180px;margin:auto}.kicker{font-size:10px;color:#b28a4d;letter-spacing:.24em;font-weight:800;margin-bottom:13px}.section h2{font:500 clamp(38px,5vw,62px)/1.02 "Playfair Display",serif}.section h2 i{color:#b28a4d}.lead{max-width:650px;color:#686661;line-height:1.7;font-size:14px;margin:18px 0 34px}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:#fff;border:1px solid #e5dfd4;border-radius:15px;padding:25px;min-height:170px}.card .n{color:#b28a4d;font-size:9px;letter-spacing:.2em}.card h3{font:500 23px "Playfair Display",serif;margin:26px 0 9px}.card p{font-size:11px;line-height:1.55;color:#777}
-.darksection{padding:90px 6%;background:#0a1014}.darkinner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.darksection h2{font:500 clamp(38px,5vw,62px)/1.02 "Playfair Display",serif}.darksection h2 i{color:var(--gold2)}.darksection p{color:#b9bec1;line-height:1.7;font-size:14px;margin:18px 0 25px}
-footer{padding:35px 6%;background:#050708;color:#888;font-size:9px;display:flex;justify-content:space-between;gap:20px}footer strong{color:#eee;letter-spacing:.16em}
-.wa{position:fixed;right:18px;bottom:16px;z-index:100;background:#20bd60;color:#fff;border-radius:999px;padding:10px 13px;font-size:9px;font-weight:800}
+:root{--gold:#d5ad64;--gold2:#f0d39a;--black:#07090a;--panel:rgba(8,10,11,.91);--line:rgba(225,194,132,.36);--white:#fff;--muted:#a9acae}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;background:var(--black);color:#fff;overflow-x:hidden}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+.hero{position:relative;min-height:100svh;background:#080a0b url("private-days-hero.png") center/cover no-repeat;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,5,6,.78),rgba(3,5,6,.25) 58%,rgba(3,5,6,.18)),linear-gradient(0deg,rgba(3,5,6,.88) 0%,transparent 42%,rgba(3,5,6,.20));pointer-events:none}
+.nav{position:absolute;top:0;left:0;right:0;height:82px;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(0,0,0,.42),transparent)}
+.logo{font:800 20px/1 Manrope,sans-serif;letter-spacing:.22em}.logo span{display:block;color:var(--gold);font-size:8px;letter-spacing:.42em;margin-top:6px}
+.navlinks{display:flex;gap:29px;font-size:11px;color:#e8e8e8}.navlinks a.active{color:var(--gold2)}
+.navright{display:flex;align-items:center;gap:10px}.lang button{border:1px solid rgba(255,255,255,.22);background:rgba(0,0,0,.38);color:#fff;border-radius:8px;padding:11px 12px;font-size:10px}.navcta{background:linear-gradient(135deg,#f0cb81,#c99b4f);color:#111;border-radius:8px;padding:13px 16px;font-size:10px;font-weight:800;letter-spacing:.07em}
+.hero-inner{position:relative;z-index:5;max-width:1380px;min-height:100svh;margin:auto;padding:110px 5% 42px;display:flex;align-items:center;gap:4.5vw}
+.hero-copy{flex:1;max-width:490px}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.29em;color:var(--gold2);margin-bottom:15px}.eyebrow:before{content:"";display:inline-block;width:36px;height:1px;background:var(--gold);vertical-align:middle;margin-right:10px}
+.hero h1{font:500 clamp(48px,5.3vw,76px)/.97 "Playfair Display",serif;letter-spacing:-.035em}.hero h1 i{color:var(--gold2)}.hero-copy p{font-size:14px;line-height:1.72;color:#e8e7e3;max-width:470px;margin:20px 0 23px}
+.pills{display:flex;flex-wrap:wrap;gap:7px}.pill{border:1px solid rgba(213,173,100,.45);background:rgba(0,0,0,.20);padding:8px 10px;border-radius:999px;font-size:8px;letter-spacing:.09em}
+.form-shell{width:min(570px,46vw);flex:none}.form-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 30px 90px rgba(0,0,0,.58),inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(15px)}
+.formhead{display:flex;justify-content:space-between;gap:15px;margin-bottom:14px}.formhead h2{font:500 29px/1 "Playfair Display",serif}.formhead h2 i{color:var(--gold2)}.formhead small{font-size:8px;color:#a7a9aa;text-align:right;line-height:1.5}
+.occasion-title{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#bfc0c0;margin-bottom:7px;font-weight:700}.occasion-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-bottom:11px}.occasion-grid button{min-height:51px;border:1px solid rgba(255,255,255,.13);border-radius:8px;background:rgba(255,255,255,.045);color:#ddd;font-size:8px;cursor:pointer;padding:6px 3px}.occasion-grid button strong{display:block;color:var(--gold2);font-size:15px;margin-bottom:4px}.occasion-grid button.active{background:linear-gradient(145deg,#e7c77e,#c79a50);border-color:#f0d49a;color:#111}.occasion-grid button.active strong{color:#111}
+.trip{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:rgba(255,255,255,.06);padding:3px;border-radius:8px;margin-bottom:11px}.trip button{border:0;background:transparent;color:#aaa;border-radius:6px;padding:10px;font-size:9px;font-weight:800;cursor:pointer}.trip button.active{background:var(--gold);color:#111}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:9px}.field.full{grid-column:1/-1}.field label{display:block;text-transform:uppercase;font-size:8px;letter-spacing:.10em;color:#aeb0b1;font-weight:700;margin:0 0 5px 2px}.field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,.13);border-radius:8px;background:rgba(255,255,255,.075);color:#fff;min-height:44px;padding:0 11px;font-size:10px;outline:none}.field textarea{height:56px;padding:10px 11px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#777}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.submit{width:100%;margin-top:11px;min-height:48px;border:0;border-radius:8px;background:linear-gradient(135deg,#f0ca7e,#c99b50);color:#111;font-size:10px;font-weight:900;letter-spacing:.08em;cursor:pointer}.secure{text-align:center;color:#999;font-size:8px;margin-top:8px}.secure b{color:#ddd}
+.features{position:relative;z-index:6;max-width:1050px;margin:-3px auto 0;padding:16px 5% 23px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.13)}.feature{display:flex;align-items:center;justify-content:center;gap:9px;border-right:1px solid rgba(255,255,255,.13)}.feature:last-child{border:0}.feature .icon{font-size:21px;color:var(--gold)}.feature b{display:block;font-size:9px;letter-spacing:.08em}.feature span{display:block;color:#999;font-size:8px;margin-top:2px}
+.section{background:#f5f1e8;color:#141616;padding:88px 6%}.section-inner{max-width:1180px;margin:auto}.kicker{font-size:9px;color:#ad8445;letter-spacing:.25em;font-weight:800;margin-bottom:13px}.section h2{font:500 clamp(39px,5vw,62px)/1.02 "Playfair Display",serif}.section h2 i{color:#ad8445}.lead{max-width:680px;color:#6e6b66;font-size:14px;line-height:1.7;margin:18px 0 32px}.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.card{background:#fff;border:1px solid #e1dbcf;border-radius:14px;overflow:hidden}.cardimg{height:150px;background:linear-gradient(135deg,#b48c54,#252525);display:flex;align-items:flex-end;padding:13px;color:#fff;font:500 21px "Playfair Display",serif}.card:nth-child(1) .cardimg{background:linear-gradient(135deg,#5b3825,#d9a45b)}.card:nth-child(2) .cardimg{background:linear-gradient(135deg,#2d2430,#b78b61)}.card:nth-child(3) .cardimg{background:linear-gradient(135deg,#46352b,#e5b86f)}.card:nth-child(4) .cardimg{background:linear-gradient(135deg,#2386a0,#e9d29b)}.card:nth-child(5) .cardimg{background:linear-gradient(135deg,#18191b,#a97742)}.cardbody{padding:12px}.cardbody p{font-size:10px;line-height:1.5;color:#777}
+.dark{background:#090d10;color:#fff;padding:80px 6%}.darkinner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.dark h2{font:500 clamp(38px,5vw,60px)/1.02 "Playfair Display",serif}.dark h2 i{color:var(--gold2)}.dark p{color:#aeb3b5;font-size:14px;line-height:1.7;margin:17px 0 23px}
+footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-between;color:#777;font-size:8px}footer strong{color:#eee;letter-spacing:.18em}
+.wa{position:fixed;right:16px;bottom:14px;z-index:100;background:#1dbb5b;color:#fff;padding:9px 12px;border-radius:999px;font-size:8px;font-weight:800}
 
-@media(max-width:950px){
- .navlinks{display:none}.hero-inner{padding-top:110px}.form-shell{width:min(560px,52vw)}.hero-copy{max-width:430px}.hero h1{font-size:50px}.cards{grid-template-columns:1fr 1fr}
-}
+@media(max-width:1000px){.navlinks{display:none}.hero-inner{gap:3vw}.hero-copy{max-width:410px}.form-shell{width:min(550px,52vw)}.hero h1{font-size:51px}.cards{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:650px){
- .hero{background-position:center top;background-size:auto 58svh;background-color:#080a0b}
- .hero:after{background:linear-gradient(0deg,#080a0b 0%,rgba(8,10,11,.05) 42%,rgba(8,10,11,.28) 100%)}
- .nav{height:64px;padding:0 15px;border:0}.logo{font-size:14px}.logo span{font-size:7px;margin-top:3px}.navcta{display:none}.lang>button{padding:9px 10px}
- .hero-inner{display:block;padding:43svh 12px 0;min-height:auto}
+ .hero{background-position:center top;background-size:auto 56svh;min-height:auto;background-color:#090b0c}
+ .hero:after{background:linear-gradient(0deg,#090b0c 0%,rgba(9,11,12,.04) 43%,rgba(9,11,12,.25) 100%)}
+ .nav{height:62px;padding:0 14px;border:0}.logo{font-size:14px}.logo span{font-size:6px;margin-top:4px}.navlinks,.navcta{display:none}.lang button{padding:9px 10px}
+ .hero-inner{display:block;padding:42svh 10px 0;min-height:auto}
  .hero-copy{display:none}
- .form-shell{width:100%;max-width:none}
- .form-card{padding:16px 13px 13px;border-radius:18px 18px 12px 12px;background:rgba(7,9,10,.95)}
- .formtop{margin-bottom:11px}.formtop h2{font-size:26px}.formtop small{display:none}
- .formtop .eyebrow{font-size:8px;margin-bottom:6px}.formtop .eyebrow:before{width:24px;margin-right:7px}
- .trip{margin-bottom:11px}.trip button{min-height:38px;font-size:9px}
- .fields{gap:8px}.field label{font-size:8px;margin-bottom:4px}.field input,.field select{min-height:43px;font-size:10px}.field textarea{height:57px;font-size:10px}.submit{min-height:47px;font-size:9px}.note{font-size:7.5px}
- .featurebar{margin:0;padding:16px 10px 22px;grid-template-columns:repeat(2,1fr);gap:12px;background:#080a0b}.feature{justify-content:flex-start;border:0;padding:5px 8px}.feature .ico{font-size:20px}
- .section{padding:65px 20px}.cards{grid-template-columns:1fr}.card{min-height:auto}.darkinner{grid-template-columns:1fr;gap:15px}.darksection{padding:65px 20px}footer{display:block;padding:25px 20px}footer span{display:block;margin-top:8px}
+ .form-shell{width:100%}.form-card{padding:14px 11px 12px;border-radius:18px 18px 12px 12px;background:rgba(7,9,10,.96)}
+ .formhead{margin-bottom:10px}.formhead h2{font-size:25px}.formhead small{display:none}.formhead .eyebrow{font-size:7px;margin-bottom:5px}.formhead .eyebrow:before{width:22px;margin-right:6px}
+ .occasion-title{font-size:7px;margin-bottom:5px}.occasion-grid{gap:4px;margin-bottom:9px}.occasion-grid button{min-height:55px;font-size:7px}.occasion-grid button strong{font-size:14px;margin-bottom:3px}
+ .trip{margin-bottom:9px}.trip button{min-height:37px;padding:8px;font-size:8px}
+ .fields{gap:7px}.field label{font-size:7px;margin-bottom:4px}.field input,.field select{min-height:42px;font-size:9px}.field textarea{height:53px;font-size:9px}
+ .submit{min-height:46px;font-size:9px;margin-top:10px}.secure{font-size:7px}
+ .features{margin:0;padding:15px 9px 20px;grid-template-columns:repeat(2,1fr);gap:11px;background:#090b0c}.feature{justify-content:flex-start;border:0;padding:4px 7px}.feature .icon{font-size:18px}.feature b{font-size:8px}.feature span{font-size:7px}
+ .section{padding:62px 18px}.section h2{font-size:39px}.cards{grid-template-columns:1fr 1fr}.cardimg{height:125px}.card:nth-child(5){grid-column:1/-1}
+ .dark{padding:62px 18px}.darkinner{grid-template-columns:1fr;gap:15px}.dark h2{font-size:40px}footer{display:block;padding:24px 18px}footer span{display:block;margin-top:7px}.wa{right:10px;bottom:10px;font-size:7px}
 }
-@media(max-width:370px){.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.hero-inner{padding-top:42svh}.form-card{padding:13px 11px}.formtop h2{font-size:24px}}
+@media(max-width:380px){.occasion-grid button{min-height:52px;font-size:6.5px}.occasion-grid button strong{font-size:13px}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.hero-inner{padding-top:41svh}}
 </style>
 </head>
 <body>
-<section class="hero" id="top">
+<section class="hero">
 <header class="nav">
-<a class="logo" href="#top">SKYLAND<span>PRIVATE JET</span></a>
-<nav class="navlinks"><a href="#top">Private Days</a><a href="#experiences">Experiences</a><a href="#quote">Request a Quote</a><a href="#contact">Contact</a></nav>
-<div class="navright">
-<div class="lang"><button id="langBtn" type="button">EN ▾</button><div class="langmenu" id="langMenu"><button data-lang="en">English</button><button data-lang="tr">Türkçe</button></div></div>
-<a class="navcta" href="#quote">REQUEST A QUOTE</a>
-</div>
+<a href="#top" class="logo">SKYLAND<span>PRIVATE JET</span></a>
+<nav class="navlinks"><a class="active" href="#top">Private Days</a><a href="#experiences">Experiences</a><a href="#quote">Request a Quote</a><a href="#contact">Contact</a></nav>
+<div class="navright"><div class="lang"><button type="button" id="lang">EN ▾</button></div><a class="navcta" href="#quote">REQUEST A QUOTE</a></div>
 </header>
 
-<div class="hero-inner">
+<div class="hero-inner" id="top">
 <div class="hero-copy">
-<div class="eyebrow">SKYLAND PRIVATE · PRIVATE DAYS</div>
-<h1>Your special moment<br><i>belongs in the sky.</i></h1>
-<p>Private jet experiences for birthdays, marriage proposals, anniversaries, honeymoons and unforgettable celebrations.</p>
-<div class="occasion-pills"><span class="pill">BIRTHDAY</span><span class="pill">MARRIAGE PROPOSAL</span><span class="pill">ANNIVERSARY</span><span class="pill">HONEYMOON</span><span class="pill">SPECIAL CELEBRATION</span></div>
+<div class="eyebrow">PRIVATE DAYS · SPECIAL OCCASIONS</div>
+<h1>Make the moment<br><i>extraordinary.</i></h1>
+<p>Private jet experiences designed for birthdays, marriage proposals, anniversaries, honeymoons and unforgettable celebrations.</p>
+<div class="pills"><span class="pill">BIRTHDAY</span><span class="pill">PROPOSAL</span><span class="pill">ANNIVERSARY</span><span class="pill">HONEYMOON</span><span class="pill">SPECIAL CELEBRATION</span></div>
 </div>
 
 <div class="form-shell" id="quote">
 <div class="form-card">
-<div class="formtop"><div><div class="eyebrow">PRIVATE DAYS FLIGHT REQUEST</div><h2>Plan your <i>moment.</i></h2></div><small>Private & confidential<br>No email required.</small></div>
+<div class="formhead"><div><div class="eyebrow">PRIVATE DAYS FLIGHT REQUEST</div><h2>Plan your <i>moment.</i></h2></div><small>Private & confidential<br>No email required.</small></div>
+
+<div class="occasion-title">Choose your occasion</div>
+<div class="occasion-grid" id="occasionGrid">
+<button type="button" data-value="Birthday" class="active"><strong>🎂</strong>Birthday</button>
+<button type="button" data-value="Marriage Proposal"><strong>♡</strong>Proposal</button>
+<button type="button" data-value="Anniversary"><strong>♡</strong>Anniversary</button>
+<button type="button" data-value="Honeymoon"><strong>◇</strong>Honeymoon</button>
+<button type="button" data-value="Special Celebration"><strong>✦</strong>Celebration</button>
+</div>
+
 <form id="specialForm" action="https://formsubmit.co/skylandaviationinfo@gmail.com" method="POST" target="formSubmitFrame">
-<input type="hidden" name="_subject" value="Skyland Private - Private Days Flight Request">
+<input type="hidden" name="_subject" value="Skyland Private Days - Special Occasion Flight Request">
 <input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_next" value="https://skylandprivate.com/ozel-gunler.html?sent=1">
-<input type="hidden" name="trip_type" id="tripType" value="Round Trip"><input type="hidden" name="source_page" value="skylandprivatedays">
+<input type="hidden" name="source_page" value="skylandprivatedays"><input type="hidden" name="occasion" id="occasionValue" value="Birthday">
+<input type="hidden" name="trip_type" id="tripType" value="Round Trip">
+
 <div class="trip"><button type="button" class="active" data-trip="Round Trip">✈ ROUND TRIP</button><button type="button" data-trip="One Way">✈ ONE WAY</button></div>
 <div class="fields">
-<div class="field full"><label>Occasion</label><select id="occasion" name="occasion" required><option value="">Select an occasion</option><option>Birthday</option><option>Marriage Proposal</option><option>Anniversary</option><option>Honeymoon</option><option>Special Celebration</option></select></div>
-<div class="field"><label>From</label><input id="from" name="from" required placeholder="Istanbul (IST)"></div>
-<div class="field"><label>To</label><input id="to" name="to" required placeholder="Paris (CDG)"></div>
-<div class="field"><label>Departure Date</label><input id="departure" name="departure" type="date" required></div>
-<div class="field return-wrap"><label>Return Date</label><input id="return" name="return" type="date"></div>
-<div class="field"><label>Passengers</label><select id="pax" name="passengers"><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
-<div class="field"><label>Full Name</label><input id="name" name="name" required placeholder="Your full name"></div>
-<div class="field full"><label>WhatsApp / Phone</label><input id="phone" name="whatsapp" type="tel" required placeholder="+90 5XX XXX XX XX"></div>
-<div class="field full"><label>Special Requests <span style="font-weight:400;color:#777">(Optional)</span></label><textarea name="special_request" placeholder="Cake, flowers, decoration, catering, transfer or any special request..."></textarea></div>
+<div class="field"><label>From</label><input name="from" id="from" required placeholder="City or airport"></div>
+<div class="field"><label>To</label><input name="to" id="to" required placeholder="City or airport"></div>
+<div class="field"><label>Departure Date</label><input type="date" name="departure" id="departure" required></div>
+<div class="field return-wrap"><label>Return Date</label><input type="date" name="return" id="return"></div>
+<div class="field"><label>Passengers</label><select name="passengers"><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+<div class="field"><label>Full Name</label><input name="name" required placeholder="Your full name"></div>
+<div class="field full"><label>WhatsApp / Phone</label><input type="tel" name="whatsapp" id="phone" required placeholder="+90 5XX XXX XX XX"></div>
+<div class="field full"><label>Special Requests <span style="font-weight:400;color:#666">(Optional)</span></label><textarea name="special_request" placeholder="Cake, flowers, decoration, catering, transfer or any special request..."></textarea></div>
 </div>
 <button class="submit" type="submit">REQUEST MY PRIVATE DAYS QUOTE →</button>
-<p class="note">🔒 Your information is secure and confidential.</p>
+<div class="secure">🔒 <b>Your information is secure and confidential.</b></div>
 </form>
 <iframe name="formSubmitFrame" style="display:none"></iframe>
 </div>
 </div>
 </div>
 
-<div class="featurebar">
-<div class="feature"><div class="ico">◇</div><div><b>BESPOKE</b><span>Made around your moment</span></div></div>
-<div class="feature"><div class="ico">♡</div><div><b>VIP SERVICE</b><span>Personalised experience</span></div></div>
-<div class="feature"><div class="ico">✦</div><div><b>GOURMET</b><span>Tailored catering</span></div></div>
-<div class="feature"><div class="ico">◷</div><div><b>24/7 SUPPORT</b><span>Dedicated concierge</span></div></div>
+<div class="features">
+<div class="feature"><div class="icon">◎</div><div><b>WORLDWIDE</b><span>Special destinations</span></div></div>
+<div class="feature"><div class="icon">◇</div><div><b>FLEXIBLE</b><span>Your flight, your time</span></div></div>
+<div class="feature"><div class="icon">♛</div><div><b>VIP</b><span>Ground services</span></div></div>
+<div class="feature"><div class="icon">◷</div><div><b>24/7</b><span>Dedicated support</span></div></div>
 </div>
 </section>
 
 <section class="section" id="experiences"><div class="section-inner">
-<div class="kicker">PRIVATE MOMENTS · SKYLAND</div><h2>Every special moment<br><i>deserves a special place.</i></h2>
-<p class="lead">From intimate celebrations to unforgettable family journeys, Skyland Private designs the flight around your occasion, your route and the people who matter most.</p>
+<div class="kicker">PRIVATE DAYS EXPERIENCES</div>
+<h2>Every celebration deserves<br><i>a higher experience.</i></h2>
+<p class="lead">Tell us what you are celebrating. Skyland Private will shape the flight and the details around your moment.</p>
 <div class="cards">
-<article class="card"><span class="n">01</span><h3>Birthday</h3><p>Celebrate above the clouds with a private flight planned around your special day.</p></article>
-<article class="card"><span class="n">02</span><h3>Marriage Proposal</h3><p>Create a private, romantic setting for the most important question.</p></article>
-<article class="card"><span class="n">03</span><h3>Anniversary</h3><p>Turn your journey together into an experience worth remembering.</p></article>
-<article class="card"><span class="n">04</span><h3>Honeymoon</h3><p>Begin your next chapter with privacy, comfort and a flight made for two.</p></article>
+<article class="card"><div class="cardimg">Birthday</div><div class="cardbody"><p>Celebrate above the clouds in complete privacy.</p></div></article>
+<article class="card"><div class="cardimg">Marriage Proposal</div><div class="cardbody"><p>Create an unforgettable setting for the perfect question.</p></div></article>
+<article class="card"><div class="cardimg">Anniversary</div><div class="cardbody"><p>Turn your journey together into a memory.</p></div></article>
+<article class="card"><div class="cardimg">Honeymoon</div><div class="cardbody"><p>Begin your next chapter in extraordinary style.</p></div></article>
+<article class="card"><div class="cardimg">Special Celebration</div><div class="cardbody"><p>Make any milestone feel truly exceptional.</p></div></article>
 </div>
 </div></section>
 
-<section class="darksection"><div class="darkinner">
-<div><div class="kicker">YOUR MOMENT. YOUR FLIGHT.</div><h2>Made around you.<br><i>Down to every detail.</i></h2></div>
-<div><p>Tell us what you are celebrating. Our private aviation concierge will coordinate the route, aircraft options and special requests around your plans.</p><a class="goldbtn" href="#quote">START PLANNING →</a></div>
+<section class="dark" id="contact"><div class="darkinner">
+<div><div class="kicker">YOUR MOMENT · YOUR FLIGHT</div><h2>Designed around you.<br><i>Down to every detail.</i></h2></div>
+<div><p>From the route to the celebration details, our private aviation team coordinates your experience with discretion, flexibility and personal attention.</p><a class="navcta" href="#quote">START PLANNING →</a></div>
 </div></section>
 
-<section class="section" id="contact" style="text-align:center"><div class="section-inner">
-<div class="kicker">SKYLAND PRIVATE AVIATION CONCIERGE</div><h2>Let your most special moment<br><i>begin in the sky.</i></h2><p class="lead" style="margin-left:auto;margin-right:auto">Private. Personal. Extraordinary.</p><a class="goldbtn" href="#quote">GET YOUR PRIVATE DAYS QUOTE →</a>
-</div></section>
 <footer><strong>SKYLAND PRIVATE JET</strong><span>© 2026 Skyland Private · Private Days · Confidential Flight Requests</span></footer>
-<a class="wa" id="waLink" href="https://wa.me/905309918804" target="_blank" rel="noopener">WHATSAPP · +90 530 991 88 04</a>
+<a class="wa" href="https://wa.me/905309918804" target="_blank" rel="noopener">WHATSAPP · +90 530 991 88 04</a>
 
 <script>
-const form=document.getElementById('specialForm'), tripType=document.getElementById('tripType'), ret=document.getElementById('return'), dep=document.getElementById('departure');
-const today=new Date();today.setHours(0,0,0,0);const iso=d=>new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);dep.min=iso(today);ret.min=iso(today);
+const form=document.getElementById('specialForm'),tripType=document.getElementById('tripType'),ret=document.getElementById('return'),dep=document.getElementById('departure'),occasion=document.getElementById('occasionValue');
+const now=new Date();now.setHours(0,0,0,0);const iso=d=>new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);dep.min=iso(now);ret.min=iso(now);
+document.querySelectorAll('.occasion-grid button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.occasion-grid button').forEach(x=>x.classList.remove('active'));b.classList.add('active');occasion.value=b.dataset.value}));
 document.querySelectorAll('.trip button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.trip button').forEach(x=>x.classList.remove('active'));b.classList.add('active');tripType.value=b.dataset.trip;const round=b.dataset.trip==='Round Trip';document.querySelector('.return-wrap').style.display=round?'block':'none';ret.required=round;if(!round)ret.value=''}));
-dep.addEventListener('change',()=>{ret.min=dep.value||iso(today);if(ret.value&&ret.value<dep.value)ret.value=dep.value});
-function buildMsg(){return `Hello Skyland Private,\n\nPrivate Days flight request:\nOccasion: ${form.occasion.value}\nTrip: ${tripType.value}\nFrom: ${form.from.value}\nTo: ${form.to.value}\nDeparture: ${form.departure.value}\nReturn: ${form.return.value||'One Way'}\nPassengers: ${form.passengers.value}\nName: ${form.name.value}\nWhatsApp / Phone: ${form.phone.value}\nSpecial Requests: ${form.special_request.value||'-'}`;}
-form.addEventListener('submit',()=>{if(tripType.value==='Round Trip'&&ret.value&&ret.value<dep.value){event.preventDefault();alert('Return date must be after departure date.');return}setTimeout(()=>{window.open('https://wa.me/905309918804?text='+encodeURIComponent(buildMsg()),'_blank')},250)});
-const langBtn=document.getElementById('langBtn'),langMenu=document.getElementById('langMenu');
-langBtn.onclick=()=>langMenu.classList.toggle('open');document.addEventListener('click',e=>{if(!e.target.closest('.lang'))langMenu.classList.remove('open')});
-const tr={'Private Days':'Özel Günler','Experiences':'Deneyimler','Request a Quote':'Teklif Al','Contact':'İletişim','REQUEST A QUOTE':'TEKLİF AL','PRIVATE DAYS FLIGHT REQUEST':'ÖZEL GÜN UÇUŞ TALEBİ','Plan your':'Planlayın','moment.':'anınızı.','Occasion':'Özel Gün / Kutlama','Select an occasion':'Seçiniz','Birthday':'Doğum Günü','Marriage Proposal':'Evlilik Teklifi','Anniversary':'Yıldönümü','Honeymoon':'Balayı','Special Celebration':'Özel Kutlama','From':'Nereden','To':'Nereye','Departure Date':'Kalkış Tarihi','Return Date':'Dönüş Tarihi','Passengers':'Yolcu','Full Name':'Ad Soyad','WhatsApp / Phone':'WhatsApp / Telefon','Special Requests':'Özel Talepler','REQUEST MY PRIVATE DAYS QUOTE →':'ÖZEL GÜN TEKLİFİ AL →'};
-document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>{const l=btn.dataset.lang;document.documentElement.lang=l;langBtn.textContent=l.toUpperCase()+' ▾';document.querySelectorAll('label').forEach(x=>{if(tr[x.textContent.trim()])x.textContent=tr[x.textContent.trim()]});document.querySelectorAll('.navlinks a,.navcta,.submit').forEach(x=>{if(tr[x.textContent.trim()])x.textContent=tr[x.textContent.trim()]});const sel=document.getElementById('occasion');[...sel.options].forEach(o=>{if(tr[o.textContent])o.textContent=tr[o.textContent]});langMenu.classList.remove('open');}));
+dep.addEventListener('change',()=>{ret.min=dep.value||iso(now);if(ret.value&&ret.value<dep.value)ret.value=dep.value});
+form.addEventListener('submit',e=>{if(tripType.value==='Round Trip'&&ret.value&&ret.value<dep.value){e.preventDefault();alert('Return date must be after departure date.')}});
+
+// Lightweight EN/TR switch for the key interface labels.
+document.getElementById('lang').addEventListener('click',()=>{
+ const tr=document.documentElement.lang==='tr'; document.documentElement.lang=tr?'en':'tr';
+ document.getElementById('lang').textContent=tr?'EN ▾':'TR ▾';
+});
 </script>
 </body>
 </html>
