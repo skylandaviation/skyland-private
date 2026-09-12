@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Skyland Private — global private aviation, jet charter and bespoke travel services.">
+<title>Skyland Private — Beyond the Journey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=30">
+
+<style>
+/* SKYLAND FLIGHT REQUEST - simplified premium form */
+.flight-quick-date{appearance:none;border:1px solid rgba(201,166,107,.3)!important;background:rgba(255,255,255,.035)!important;color:#ddd!important;padding:12px 16px!important;border-radius:8px!important;cursor:pointer!important;transition:.2s}
+.flight-quick-date.active,.flight-quick-date:hover{border-color:#c9a66b!important;color:#c9a66b!important;background:rgba(201,166,107,.08)!important}
+.trip-option{appearance:none;background:transparent;border:1px solid rgba(255,255,255,.16);color:#bbb;padding:10px 15px;border-radius:7px;cursor:pointer;margin-right:7px}
+.trip-option.active{border-color:#c9a66b;color:#c9a66b}
+#skylandFlightForm .contact-grid{gap:12px}
+#skylandFlightForm input,#skylandFlightForm select{min-height:54px}
+@media(max-width:700px){.flight-quick-date{flex:1 1 45%}}
+
+/* Skyland lead form refinements */
+.hero-plan-head strong{font-size:1.45rem;letter-spacing:.01em}
+.quick-trip-switch .quick-trip{font-size:1rem;padding:12px 18px}
+.hero-plan-fields label{font-size:.9rem}
+.planner-form .trip-option{font-size:1rem}
+.planner-form .date-title{font-size:.9rem}
+#skylandFlightForm .submit-flight{font-size:1.05rem}
+#skylandSuccess{display:none;min-height:280px;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:rgba(255,255,255,.035);border:1px solid rgba(201,166,107,.25);border-radius:18px;margin-top:12px}
+#skylandSuccess .success-check{width:72px;height:72px;border-radius:50%;background:#2e9b5b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:700;margin-bottom:18px;box-shadow:0 10px 30px rgba(46,155,91,.22)}
+#skylandSuccess h3{font-family:Georgia,serif;font-size:30px;font-weight:400;margin:0 0 10px;color:#fff}
+#skylandSuccess p{color:#d7d7d7;line-height:1.7;font-size:16px;margin:0}
+#skylandSuccess .success-ok{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:11px 22px;border-radius:999px;background:#2e9b5b;color:#fff;font-weight:700;text-decoration:none}
+@media(max-width:700px){.hero-plan-head strong{font-size:1.25rem}.quick-trip-switch .quick-trip{font-size:.92rem;padding:10px 12px}#skylandSuccess h3{font-size:25px}}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#home"><img src="skyland-logo-reference.png" alt="Skyland Private"><span class="sr-only">SKYLAND PRIVATE</span></a>
+  <nav class="main-nav">
+    <div class="nav-drop"><a href="#charter">Charter <b>⌄</b></a><div class="mega"><a href="#quote">Private Jet Charter</a><a href="#quote">One Way / Round Trip</a></div></div>
+    <div class="nav-drop"><a href="#fleet">Fleet <b>⌄</b></a><div class="mega"><a href="#fleet">Light &amp; Midsize Jets</a><a href="#fleet">Heavy &amp; Ultra Long Range</a></div></div>
+    <div class="nav-drop"><a href="#services">Services <b>⌄</b></a><div class="mega"><a href="#services">Celebrations &amp; VIP</a><a href="#services">Diplomatic &amp; Sports</a><a href="#services">Corporate Aviation</a></div></div>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <button class="mobile-member-link" type="button" id="openLoginMobile">Member Login</button>
+  </nav>
+  <div class="head-right">
+    <div class="language-picker"><button class="lang" type="button" id="langBtn">EN ▾</button><div class="language-menu" id="langMenu"><button data-lang="en">🇬🇧 English</button><button data-lang="tr">🇹🇷 Türkçe</button><button data-lang="de">🇩🇪 Deutsch</button><button data-lang="fr">🇫🇷 Français</button><button data-lang="es">🇪🇸 Español</button><button data-lang="it">🇮🇹 Italiano</button><button data-lang="ar">🇦🇪 العربية</button><button data-lang="ru">🇷🇺 Русский</button><button data-lang="zh">🇨🇳 中文</button><button data-lang="ja">🇯🇵 日本語</button><button data-lang="ko">🇰🇷 한국어</button><button data-lang="pt">🇵🇹 Português</button><button data-lang="nl">🇳🇱 Nederlands</button><button data-lang="el">🇬🇷 Ελληνικά</button><button data-lang="fa">🇮🇷 فارسی</button><button data-lang="hi">🇮🇳 हिन्दी</button></div></div>
+    <a class="quote" href="#quote">Request a Quote</a>
+    <button class="hamb" id="hamb" type="button" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+<section id="home" class="hero">
+  <div class="hero-bg"></div><div class="shade"></div><div class="mobile-hero-copy"><p class="kicker">SKYLAND PRIVATE AVIATION</p><h1>Fly beyond.<br><i>Live extraordinary.</i></h1><p>Global private jet charter, bespoke journeys and discreet aviation support.</p><strong>DO NOT PLAN YOUR FLIGHT WITHOUT ASKING US.</strong></div>
+  <div class="hero-copy"><p class="kicker">SKYLAND PRIVATE · EST. 2026</p><h1>Fly beyond.<br><i>Live extraordinary.</i></h1><p>Global private jet charter, bespoke journeys and discreet aviation support — arranged around your world.</p><div class="hero-actions"><a class="btn light" href="#quote">Plan a flight <b>→</b></a><a class="watch" href="#experience"><span>▶</span> Explore the experience</a></div></div>
+  <div class="hero-side-index"><span class="active">01</span><span>02</span><span>03</span><span>04</span></div>
+  <div class="hero-plan"><div class="hero-plan-head"><div><span>SKYLAND PRIVATE</span><strong>Plan a flight</strong></div><small>Personalised private aviation, in minutes.</small></div><div class="quick-trip-switch"><button type="button" class="quick-trip active" data-quick-trip="roundtrip">Round trip</button><button type="button" class="quick-trip" data-quick-trip="oneway">One way</button><button type="button" class="quick-trip" data-quick-trip="multi">Multi-city</button></div><div class="hero-plan-fields"><label>From<input id="quickFrom" autocomplete="off" placeholder="Istanbul (IST)"></label><label>To<input id="quickTo" autocomplete="off" placeholder="Dubai (DXB)"></label><label>Departure Date<input id="quickDate" type="date"></label><label class="quick-return-wrap">Return Date<input id="quickReturnDate" type="date"></label><label>Passengers<select id="quickPax"><option>1 Passenger</option><option>2 Passengers</option><option>3 Passengers</option><option>4 Passengers</option><option>5+ Passengers</option></select></label><label>Full Name<input id="quickName" placeholder="Your full name"></label><label>WhatsApp / Phone<input id="quickPhone" type="tel" placeholder="Phone / WhatsApp"></label><button type="button" class="quick-plan-btn" id="quickPlanBtn">Continue to request <b>→</b></button></div><div class="plan-foot"><span>Worldwide airport selection · Real-time route enquiry</span><a href="#quote">Open full planner →</a></div></div>
+  <div class="hero-scroll">SCROLL TO EXPLORE <span></span></div>
+</section>
+<section id="events" class="celebration-banner">
+  <div class="celebration-copy">
+    <p class="kicker">SKYLAND PRIVATE · PRIVATE OFFER</p>
+    <h2>Plan your flight<br><i>with us before you book.</i></h2>
+    <p>Do not miss your first-flight benefits. Turn birthdays, anniversaries and special occasions into unforgettable private jet experiences.</p>
+    <div class="celebration-points"><span>First Flight Benefit</span><span>Private Decoration</span><span>Gourmet Catering</span><span>Complete Privacy</span></div>
+    <a class="btn goldbtn" href="#quote">Plan Your Occasion <b>→</b></a>
+  </div>
+</section>
+<section class="visual-strip"><div class="strip-card s1"><span>01</span><b>PRIVATE JET CHARTER</b><small>On-demand flights worldwide</small></div><div class="strip-card s2"><span>02</span><b>EMPTY LEG FLIGHTS</b><small>Exceptional value, exceptional aircraft</small></div><div class="strip-card s3"><span>03</span><b>JET CELEBRATIONS</b><small>Birthdays, anniversaries & milestones</small></div><div class="strip-card s4"><span>04</span><b>SPORTS TEAM TRAVEL</b><small>Move champions without compromise</small></div><div class="strip-card s5"><span>05</span><b>DIPLOMATIC & OFFICIAL</b><small>Discreet. Secure. Reliable.</small></div><div class="strip-card s6"><span>06</span><b>CORPORATE AVIATION</b><small>Business travel, elevated</small></div></section>
+<section class="cinematic-banner"><div class="cinematic-overlay"><p class="kicker">SKYLAND PRIVATE</p><h2>Private aviation.<br><i>Without compromise.</i></h2><a class="btn light" href="#quote">Request a private flight <b>→</b></a></div></section>
+<section id="charter" class="intro"><div><p class="kicker">PRIVATE AVIATION</p><h2>Your journey.<br><i>Your way.</i></h2></div><div class="intro-text"><p>From a last-minute board meeting to a once-in-a-lifetime celebration, Skyland Private arranges the aircraft, crew and ground experience around the reason you are travelling.</p><a class="text-link" href="#quote">Request a private flight <span>→</span></a></div></section>
+<section id="fleet" class="fleet"><div class="fleet-head"><div><p class="kicker">THE FLEET</p><h2>Aircraft for<br><i>every ambition.</i></h2></div><p>Access a worldwide network of carefully selected aircraft, matched to your route, passenger count, range and level of privacy.</p></div><div class="fleet-grid"><article class="jet jet1"><div><small>LIGHT JET</small><h3>Light & Agile</h3><p>Efficient regional travel for up to 7 passengers.</p><a href="#quote">Explore aircraft →</a></div></article><article class="jet jet2"><div><small>SUPER MIDSIZE</small><h3>Space & Range</h3><p>Comfortable cabins for longer journeys.</p><a href="#quote">Explore aircraft →</a></div></article><article class="jet jet3"><div><small>ULTRA LONG RANGE</small><h3>Global Cabin</h3><p>Intercontinental travel with exceptional space.</p><a href="#quote">Explore aircraft →</a></div></article></div></section>
+<section class="editorial-banner"><div class="editorial-image"></div><div class="editorial-copy"><p class="kicker">THE SKYLAND DIFFERENCE</p><h2>One call.<br><i>The world opens.</i></h2><p>Aircraft, permits, catering, security, transfers and every detail between departure and arrival — coordinated by one dedicated aviation team.</p><a class="btn light" href="#quote">Speak to a concierge <b>→</b></a></div></section>
+<section id="services" class="services-section"><div class="services-head"><p class="kicker">BEYOND THE FLIGHT</p><h2>Whatever the occasion,<br><i>we make it extraordinary.</i></h2><p>Special aviation solutions for moments that demand more planning, more discretion and more care.</p></div><div class="services-grid"><article><span>01</span><h3>Jet Birthday & Celebrations</h3><p>Turn a birthday, anniversary or milestone into a private airborne celebration.</p><a href="#quote">Plan an occasion →</a></article><article><span>02</span><h3>VIP & Special Flights</h3><p>Time-critical and discreet flight coordination with dedicated support.</p><a href="#quote">Request support →</a></article><article><span>03</span><h3>Diplomatic & Official Travel</h3><p>Confidential aviation for official delegations and protocol-sensitive missions.</p><a href="#quote">Speak privately →</a></article><article><span>04</span><h3>Football & Sports Teams</h3><p>Team charters around fixtures, training, equipment and recovery requirements.</p><a href="#quote">Arrange a team flight →</a></article><article><span>05</span><h3>Corporate Aviation</h3><p>Executive travel built around meetings, multiple destinations and demanding schedules.</p><a href="#quote">Build a corporate plan →</a></article><article><span>06</span><h3>Bespoke Global Travel</h3><p>Private islands, major capitals and hard-to-reach destinations, all coordinated end-to-end.</p><a href="#quote">Design your journey →</a></article></div></section>
+<section id="membership" class="membership-section"><div><p class="kicker">SKYLAND PRIVATE MEMBERSHIP</p><h2>Your world.<br><i>Your access.</i></h2></div><div><p>Join Skyland Private to request flights faster, save travel preferences and receive priority assistance for future journeys.</p><button class="btn darkbtn" type="button" id="openRegister">Become a Member <b>→</b></button></div></section>
+<section id="experience" class="experience"><div class="experience-image"></div><div class="experience-copy"><p class="kicker">THE SKYLAND EXPERIENCE</p><h2>More than a flight.<br><i>A private world.</i></h2><p>From the first call to the moment you arrive, our team manages every detail: priority handling, bespoke catering, ground transfers, security coordination and 24/7 support.</p><div class="facts"><div><b>24/7</b><span>GLOBAL SUPPORT</span></div><div><b>WORLDWIDE</b><span>DESTINATIONS</span></div><div><b>ONE</b><span>DEDICATED TEAM</span></div></div></div></section>
+<section class="world"><div class="world-bg"></div><div class="world-copy"><p class="kicker">PRIVATE WORLD</p><h2>The world,<br><i>on your terms.</i></h2><p>From Mediterranean escapes to global business capitals, discover a new way to move between the places that matter.</p><a class="btn light" href="#quote">Discover Skyland <b>→</b></a></div></section>
+<section id="media" class="media-section"><div class="media-title"><p class="kicker">SKYLAND JOURNAL</p><h2>Stories from<br><i>above and beyond.</i></h2></div><div class="media-grid"><article><div class="media-img m1"></div><small>DESTINATIONS</small><h3>Where the world feels closer</h3><a href="#quote">Read story →</a></article><article><div class="media-img m2"></div><small>EXPERIENCE</small><h3>The art of travelling privately</h3><a href="#quote">Read story →</a></article><article><div class="media-img m3"></div><small>AVIATION</small><h3>Choosing the right aircraft</h3><a href="#fleet">Explore fleet →</a></article></div></section>
+<section id="about" class="about"><p class="kicker">ABOUT SKYLAND PRIVATE</p><h2>Simple. Discreet.<br><i>Exceptional.</i></h2><p>Skyland Private brings together aircraft access, aviation expertise and personal service to make private flying effortless — wherever your next destination may be.</p></section>
+<section id="quote" class="quote-section flight-planner">
+<div class="planner-copy">
+<p class="kicker">PLAN A FLIGHT</p>
+<h2>Where will you<br><i>fly next?</i></h2>
+<p>Tell us where you want to fly and when you would like to travel. Our aviation team will contact you personally with available aircraft and tailored options.</p>
+<div class="planner-promise"><span>24/7</span><span>Worldwide</span><span>Discreet</span></div>
+</div>
+
+<form id="skylandFlightForm" class="planner-form" action="https://formsubmit.co/skylandaviationinfo@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Skyland Private Aviation Flight Request">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_honey" value="">
+
+<div class="trip-switch">
+<button type="button" class="trip-option active" data-trip="Round Trip">Round Trip</button>
+<button type="button" class="trip-option" data-trip="One Way">One Way</button>
+</div>
+<input type="hidden" name="trip_type" id="tripType" value="Round Trip">
+
+<div class="contact-grid">
+<label>From<input name="departure" required autocomplete="off" placeholder="Istanbul (IST)"></label>
+<label>To<input name="destination" required autocomplete="off" placeholder="London (LHR)"></label>
+</div>
+
+<input type="hidden" name="travel_date" id="travelDate">
+<div class="date-grid" style="margin-top:18px">
+<label>Departure Date<input type="date" name="departure_date" id="departureDate" required></label>
+<label class="return-date-field">Return Date<input type="date" name="return_date" id="returnDate"></label>
+</div>
+
+<div class="contact-grid" style="margin-top:14px">
+<label>Passengers
+<select name="passengers" required>
+<option value="">Select</option><option>1</option><option>2</option><option>3</option><option>4</option>
+<option>5</option><option>6</option><option>7</option><option>8</option><option>9+</option>
+</select>
+</label>
+<label>Full Name<input name="name" required placeholder="Your full name"></label>
+</div>
+
+<div class="contact-grid" style="margin-top:14px">
+<label style="grid-column:1/-1">WhatsApp / Phone<input name="whatsapp" type="tel" required placeholder="Phone / WhatsApp"></label>
+</div>
+
+<button class="submit-flight" id="skylandSubmit" type="submit">Request a flight <b>→</b></button>
+<p class="form-note">No payment required. Our customer representative will contact you shortly.</p>
+
+<div id="skylandSuccess" role="status" aria-live="polite">
+<div class="success-check">✓</div>
+<h3>Thank you!</h3>
+<p>Your request has been received successfully.<br><strong>We will contact you shortly.</strong></p>
+<span class="success-ok">✓ Request Received</span>
+</div>
+</form>
+</section>
+<section id="careers" class="simple-band"><p class="kicker">CAREERS</p><h2>Build the future of<br><i>private aviation.</i></h2><a class="text-link" href="mailto:skylandaviationinfo@gmail.com">Contact our team →</a></section>
+<section id="contact" class="contact-band"><div><p class="kicker">CONTACT</p><h2>Ready when<br><i>you are.</i></h2></div><div><p>Skyland Private Aviation Concierge</p><a href="mailto:skylandaviationinfo@gmail.com">skylandaviationinfo@gmail.com</a><a href="https://wa.me/905309918804?text=Merhaba%20Skyland%20Private%2C%20%C3%B6zel%20jet%20u%C3%A7u%C5%9F%20ve%20etkinlik%20hizmetleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp +90 530 991 88 04</a></div></section>
+</main>
+<div class="account-modal" id="accountModal" aria-hidden="true"><div class="account-card"><button class="account-close" id="accountClose" type="button" aria-label="Close">×</button><div class="account-brand"><img src="skyland-logo-reference.png" alt="Skyland Private"></div><div class="account-tabs"><button class="account-tab active" data-account-view="register">Create account</button><button class="account-tab" data-account-view="login">Sign in</button></div><form id="registerForm" class="account-form"><p class="account-kicker">SKYLAND PRIVATE MEMBERSHIP</p><h3>Your private access.</h3><label>Full name<input id="regName" required autocomplete="name"></label><label>Email<input id="regEmail" type="email" required autocomplete="email"></label><label>Password<input id="regPassword" type="password" minlength="8" required autocomplete="new-password"></label><button class="account-submit" type="submit">Create member account</button><p class="account-note" id="accountNote"></p></form><form id="loginForm" class="account-form" hidden><p class="account-kicker">MEMBER ACCESS</p><h3>Welcome back.</h3><label>Email<input id="loginEmail" type="email" required autocomplete="email"></label><label>Password<input id="loginPassword" type="password" required autocomplete="current-password"></label><button class="account-submit" type="submit">Sign in</button><p class="account-note" id="loginNote"></p></form></div></div>
+<footer><div class="footer-logo"><img src="skyland-logo-reference.png" alt="Skyland Private"></div><div class="footer-links"><a href="#charter">Charter</a><a href="#fleet">Fleet</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#membership">Membership</a><a href="#about">About</a><a href="#media">Media</a><a href="#contact">Contact</a></div><p>© <span id="year"></span> Skyland Private. All rights reserved.</p></footer>
+<div class="floating-actions"><div class="live-chat" id="liveChat"><div class="chat-head" id="chatHead"><span class="chat-avatar"><img src="skyland-logo-reference.png" alt="Skyland Private"></span><span><b>Skyland Concierge</b><small>Private aviation support · Online</small></span><em class="chat-min">−</em></div><div class="chat-body"><p>How can we assist with your next flight?</p><a class="chat-wa" target="_blank" rel="noopener" href="https://wa.me/905309918804?text=Merhaba%20Skyland%20Private%2C%20%C3%B6zel%20jet%20u%C3%A7u%C5%9F%20ve%20etkinlik%20hizmetleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">Chat on WhatsApp <span>↗</span></a></div></div><a class="whatsapp-float" href="https://wa.me/905309918804?text=Merhaba%20Skyland%20Private%2C%20%C3%B6zel%20jet%20u%C3%A7u%C5%9F%20ve%20etkinlik%20hizmetleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." aria-label="WhatsApp"><span class="wa-icon" aria-hidden="true"><svg viewBox="0 0 32 32" role="img"><path d="M16 4.2a11.7 11.7 0 0 0-10 17.8L4.5 27.7l5.9-1.5A11.7 11.7 0 1 0 16 4.2Zm0 2.1a9.6 9.6 0 0 1 8.1 14.7c-1.9 2.8-5 4.4-8.1 4.4-1.7 0-3.3-.4-4.8-1.2l-.5-.3-3.5.9.9-3.4-.3-.5A9.6 9.6 0 0 1 16 6.3Zm-3 4.8c-.3 0-.7.1-.9.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.2 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.6-.7 1.8-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.7-.4l-1.6-.8c-.4-.2-.7-.1-.9.2l-.7.9c-.2.2-.4.3-.7.1-.4-.2-1.4-.5-2.7-1.7-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.2-.7l.5-.6c.2-.2.3-.4.4-.7.1-.2 0-.5-.1-.7l-.7-1.6c-.2-.5-.5-.7-.9-.7Z"/></svg></span><span>WhatsApp</span></a></div>
+<button class="back-to-top" id="backToTop" type="button" aria-label="Sayfanın başına dön">↑</button>
+<div id="google_translate_element" style="display:none!important"></div>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}</script>
+
+<script src="script.js?v=30" defer></script>
+
+<script>
+(function(){
+const form=document.getElementById('skylandFlightForm');
+if(!form) return;
+const dateInput=document.getElementById('travelDate');
+const departureDate=document.getElementById('departureDate');
+const returnDate=document.getElementById('returnDate');
+const submit=document.getElementById('skylandSubmit');
+const success=document.getElementById('skylandSuccess');
+
+document.querySelectorAll('.trip-option').forEach(btn=>{
+ btn.addEventListener('click',()=>{
+  document.querySelectorAll('.trip-option').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tripType').value=btn.dataset.trip;
+ });
+});
+
+if(departureDate){ departureDate.addEventListener('change',()=>{ dateInput.value=departureDate.value; }); }
+
+form.addEventListener('submit',async e=>{
+ e.preventDefault();
+ if(!departureDate || !departureDate.value){ alert('Please select a departure date.'); return; }
+ if(document.getElementById('tripType')?.value==='Round Trip' && (!returnDate || !returnDate.value)){ alert('Please select a return date.'); return; }
+ submit.disabled=true; submit.innerHTML='Sending request...';
+ try{
+  const ajaxAction='https://formsubmit.co/ajax/skylandaviationinfo@gmail.com';
+  const res=await fetch(ajaxAction,{method:'POST',headers:{Accept:'application/json'},body:new FormData(form)});
+  const data=await res.json().catch(()=>({}));
+  if(!res.ok || data.success===false) throw new Error('failed');
+  form.querySelectorAll(':scope > *').forEach(el=>{if(el!==success) el.style.display='none';});
+  window.location.assign(new URL('thank-you.html',window.location.href).href);
+ }catch(err){
+  submit.disabled=false; submit.innerHTML='Request a flight <b>→</b>';
+  alert('Talep gönderilemedi. Lütfen WhatsApp üzerinden bize ulaşın.');
+ }
+});
+})();
+</script>
+
+<script>
+(function(){
+ const b=document.getElementById('backToTop');
+ if(!b)return;
+ const toggle=()=>b.classList.toggle('show',window.scrollY>500);
+ window.addEventListener('scroll',toggle,{passive:true}); toggle();
+ b.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+})();
+</script>
+</body></html>
