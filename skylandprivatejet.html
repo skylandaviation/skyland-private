@@ -30,54 +30,293 @@
 @media(max-width:650px){.hero{background-position:center center;background-size:cover}.nav{height:68px;padding:0 14px}.logo{font-size:13px}.nav-actions{gap:6px}.lang-btn{height:38px;padding:0 10px;font-size:11px}.navcta{padding:10px 10px;font-size:8px;letter-spacing:.05em}.hero-inner{padding:95px 15px 28px;gap:28px}.hero-copy{max-width:100%}h1{font-size:clamp(40px,12vw,52px);line-height:.98}.hero-copy>p{font-size:13px;max-width:420px}.hero-trust{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hero-trust div{padding:11px 10px;border-left:0;border-top:1px solid rgba(255,255,255,.14)}.form-card{padding:16px}.form-head h2{font-size:30px}.fields{grid-template-columns:1fr!important}.field.full{grid-column:auto}.trip{grid-template-columns:1fr 1fr}.trip button{font-size:10px}.submit{font-size:11px;padding:15px 12px}.business-detail{padding:65px 20px}.business-grid{grid-template-columns:1fr}.business-box{min-height:auto}.business-experience{padding:65px 20px}.experience-stats{grid-template-columns:1fr 1fr}.business-contact{padding:55px 20px}.language-menu{right:-20px}}
 @media(max-width:390px){.navcta{display:none}.hero-inner{padding-top:85px}.form-card{padding:13px}.hero-trust{grid-template-columns:1fr}.experience-stats{grid-template-columns:1fr}}
 
-/* FORM-FIRST MOBILE CONVERSION MODE */
-@media (max-width:650px){
-  html,body{width:100%;overflow-x:hidden;background:#070909}
-  .hero{min-height:100svh;height:auto;background-image:linear-gradient(180deg,rgba(5,7,8,.98),rgba(7,9,10,.96)),url("business-hero-bg.png");background-position:center;background-size:cover;background-attachment:scroll}
-  .hero:before{background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.72));}
-  .nav{position:relative;height:64px;padding:0 14px;background:rgba(5,7,8,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,166,107,.18)}
-  .logo{font-size:12px;letter-spacing:.16em}.logo span{font-size:7px;letter-spacing:.28em;margin-top:3px}
-  .navlinks,.navcta{display:none!important}
-  .nav-actions{margin-left:auto}
-  .lang-btn{height:34px;padding:0 10px;border-radius:8px;font-size:10px;background:#111414;border-color:rgba(201,166,107,.35)}
-  .language-menu{top:42px;right:0;width:145px}
-  .hero-inner{min-height:auto;display:flex;flex-direction:column;padding:14px 12px 24px;gap:0;max-width:none;align-items:stretch}
+/* =========================================================
+   SKYLAND — FORM OVER HERO IMAGE
+   Desktop: form sits directly on the image.
+   Mobile: image is first, form overlaps the lower image area.
+   ========================================================= */
+
+html,body{background:#050607}
+body{overflow-x:hidden}
+
+.hero{
+  min-height:100svh;
+  background-image:
+    linear-gradient(90deg,rgba(3,5,7,.16) 0%,rgba(3,5,7,.05) 58%,rgba(3,5,7,.20) 100%),
+    linear-gradient(0deg,rgba(3,5,7,.78) 0%,rgba(3,5,7,.08) 48%,rgba(3,5,7,.18) 100%),
+    url("business-hero-bg.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-inner{
+  max-width:none;
+  width:100%;
+  min-height:100svh;
+  padding:110px 5vw 55px;
+  display:block;
+  position:relative;
+}
+
+.hero-copy{
+  position:absolute;
+  left:5vw;
+  bottom:105px;
+  z-index:4;
+  max-width:520px;
+  padding:0;
+  display:block;
+  text-shadow:0 3px 25px rgba(0,0,0,.6);
+}
+
+.hero-copy .eyebrow{margin-bottom:12px}
+.hero-copy h1{
+  font-size:clamp(42px,4.7vw,72px);
+  line-height:.98;
+}
+.hero-copy>p{
+  font-size:14px;
+  line-height:1.55;
+  max-width:500px;
+  margin:18px 0 20px;
+  color:#eee;
+}
+.hero-btn{padding:14px 18px}
+
+.hero-trust{
+  margin-top:24px;
+  max-width:500px;
+}
+.hero-trust div{padding:0 15px}
+.hero-trust b{font-size:11px}
+.hero-trust span{font-size:9px}
+
+.form-shell{
+  position:absolute;
+  z-index:8;
+  top:50%;
+  right:5vw;
+  transform:translateY(-47%);
+  width:min(590px,42vw);
+  max-width:590px;
+}
+
+.form-card{
+  padding:25px;
+  border-radius:20px;
+  background:linear-gradient(145deg,rgba(8,10,11,.86),rgba(5,7,8,.74));
+  border:1px solid rgba(234,209,160,.48);
+  box-shadow:0 28px 90px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter:blur(16px);
+}
+
+.form-head{margin-bottom:16px}
+.form-head h2{font-size:29px}
+.form-head p{font-size:10px}
+.trip{margin-bottom:14px}
+.trip button{padding:10px 8px}
+.fields{gap:10px}
+.field label{font-size:9px;margin-bottom:5px}
+.field input,.field textarea,.field select{
+  min-height:46px;
+  border-radius:9px;
+  font-size:12px;
+}
+.field textarea{height:66px;padding-top:13px}
+.submit{
+  margin-top:13px;
+  padding:15px 16px;
+  border-radius:9px;
+  font-size:11px;
+}
+.form-foot{margin-top:11px;font-size:9px}
+
+.wa{
+  right:18px;
+  bottom:16px;
+  padding:10px 13px;
+  font-size:10px;
+}
+
+@media(max-width:1050px) and (min-width:651px){
+  .hero-copy{left:4vw;bottom:70px;max-width:430px}
+  .hero-copy h1{font-size:48px}
+  .hero-copy>p{font-size:13px}
+  .form-shell{right:4vw;width:min(540px,48vw)}
+  .form-card{padding:20px}
+}
+
+@media(max-width:650px){
+  .hero{
+    min-height:100svh;
+    background-position:center top;
+    background-size:auto 58svh;
+    background-repeat:no-repeat;
+    background-color:#080a0b;
+    background-image:
+      linear-gradient(0deg,rgba(5,7,8,1) 0%,rgba(5,7,8,.08) 32%,rgba(5,7,8,.10) 100%),
+      url("business-hero-bg.png");
+  }
+
+  .nav{
+    position:absolute;
+    height:64px;
+    padding:0 15px;
+    background:linear-gradient(180deg,rgba(0,0,0,.42),transparent);
+    border-bottom:0;
+  }
+  .logo{font-size:13px}
+  .logo span{font-size:7px;margin-top:3px}
+  .navlinks,.navcta{display:none}
+  .nav-actions{gap:5px}
+  .lang-btn{
+    height:34px;
+    padding:0 9px;
+    font-size:10px;
+    background:rgba(8,12,15,.48);
+  }
+
+  .hero-inner{
+    min-height:auto;
+    padding:0;
+    display:block;
+  }
+
+  /* Hide advertising copy: the visitor already came from the ad. */
   .hero-copy{display:none!important}
-  .form-shell{order:1;width:100%;max-width:none;margin:0}
-  .form-card{padding:16px 14px 15px;border-radius:16px;background:linear-gradient(145deg,rgba(17,19,19,.98),rgba(8,10,10,.98));border-color:rgba(218,188,135,.42);box-shadow:0 18px 55px rgba(0,0,0,.55);backdrop-filter:blur(12px)}
-  .form-head{display:block;margin-bottom:14px}
-  .form-head .eyebrow{font-size:9px;letter-spacing:.2em;margin-bottom:6px}
-  .form-head .eyebrow:before{width:25px;margin-right:8px}
-  .form-head h2{font-size:28px;line-height:1.02}
+
+  /*
+    Image occupies the opening screen.
+    Form starts on the lower part of the image and continues naturally.
+  */
+  .form-shell{
+    position:relative;
+    top:auto;
+    right:auto;
+    transform:none;
+    width:100%;
+    max-width:none;
+    padding:47svh 12px 24px;
+    z-index:5;
+  }
+
+  .form-card{
+    padding:17px 14px 14px;
+    border-radius:18px 18px 14px 14px;
+    background:rgba(7,9,10,.94);
+    border:1px solid rgba(234,209,160,.42);
+    box-shadow:0 -12px 50px rgba(0,0,0,.32),0 25px 70px rgba(0,0,0,.55);
+    backdrop-filter:blur(18px);
+  }
+
+  .form-head{
+    align-items:center;
+    margin-bottom:12px;
+  }
+  .form-head .eyebrow{
+    font-size:8px;
+    letter-spacing:.22em;
+    margin-bottom:6px;
+  }
+  .form-head .eyebrow:before{
+    width:24px;
+    margin-right:7px;
+  }
+  .form-head h2{
+    font-size:27px;
+    line-height:1;
+  }
   .form-head p{display:none}
-  .trip{margin-bottom:12px;padding:3px;border-radius:9px}
-  .trip button{padding:10px 6px;font-size:9px}
-  .fields{grid-template-columns:1fr!important;gap:9px}
+
+  .trip{
+    margin-bottom:12px;
+    padding:3px;
+    border-radius:9px;
+  }
+  .trip button{
+    min-height:39px;
+    padding:9px 5px;
+    font-size:10px;
+  }
+
+  .fields{
+    grid-template-columns:1fr 1fr!important;
+    gap:9px;
+  }
+  .field.full{grid-column:1/-1}
+  .field label{
+    font-size:8px;
+    letter-spacing:.11em;
+    margin-bottom:4px;
+  }
+  .field input,.field select{
+    min-height:44px;
+    padding-left:37px;
+    padding-right:32px;
+    font-size:11px;
+    border-radius:8px;
+  }
+  .field textarea{
+    height:60px;
+    padding:12px 35px;
+    font-size:11px;
+  }
+  .icon{
+    left:11px;
+    width:15px;
+    font-size:12px;
+  }
+  .chevron{right:11px}
+
+  .submit{
+    margin-top:12px;
+    min-height:48px;
+    padding:13px 10px;
+    font-size:10px;
+    letter-spacing:.08em;
+    border-radius:9px;
+  }
+
+  .form-foot{
+    margin-top:9px;
+    font-size:8px;
+  }
+  .secure{
+    width:19px;
+    height:19px;
+    font-size:10px;
+  }
+
+  .business-detail,
+  .business-experience,
+  .business-contact{
+    position:relative;
+    z-index:10;
+  }
+
+  .wa{
+    right:12px;
+    bottom:12px;
+    padding:9px 11px;
+    font-size:9px;
+  }
+}
+
+@media(max-width:390px){
+  .form-shell{padding-top:45svh;padding-left:9px;padding-right:9px}
+  .form-card{padding:14px 11px 12px}
+  .fields{gap:7px}
+  .field input,.field select{min-height:42px;font-size:10px;padding-left:34px}
+  .field textarea{height:56px;font-size:10px}
+  .submit{font-size:9px;min-height:46px}
+}
+
+@media(max-width:340px){
+  .fields{grid-template-columns:1fr!important}
   .field.full{grid-column:auto}
-  .field label{font-size:8px;margin-bottom:5px;letter-spacing:.12em}
-  .field input,.field textarea,.field select{min-height:45px;border-radius:9px;padding-left:38px;padding-right:36px;font-size:13px}
-  .field textarea{height:66px;padding-top:12px}
-  .icon{left:12px;font-size:12px}
-  .chevron{right:12px}
-  .airport-menu{max-height:190px;top:calc(100% + 5px);border-radius:10px}
-  .airport-option{padding:10px 12px}
-  .airport-option b{font-size:11px}.airport-option span{font-size:9px}
-  .submit{margin-top:12px;padding:15px 10px;border-radius:10px;font-size:10px;letter-spacing:.1em}
-  .form-foot{margin-top:10px;font-size:8px;line-height:1.35}
-  .secure{width:19px;height:19px;font-size:10px}
-  .wa{right:12px;bottom:12px;padding:9px 12px;font-size:9px;opacity:.96}
-  .business-detail,.business-experience,.business-contact{margin-top:0}
+  .form-shell{padding-top:43svh}
 }
-@media (max-width:390px){
-  .nav{height:60px}
-  .hero-inner{padding:10px 10px 20px}
-  .form-card{padding:13px 11px}
-  .form-head h2{font-size:25px}
-  .trip button{font-size:8px;padding:9px 4px}
-  .field input,.field textarea,.field select{min-height:43px;font-size:12px}
-  .submit{padding:14px 8px;font-size:9px}
-}
-/* Keep desktop presentation unchanged; mobile intentionally hides non-conversion copy until after the form. */
+
 </style>
 </head>
 <body>
