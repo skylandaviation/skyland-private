@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="description" content="Skyland Private Days — private jet experiences for birthdays, proposals, anniversaries, honeymoons and special celebrations.">
 <title>Skyland Private Days | Special Occasions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 .trip{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:rgba(255,255,255,.06);padding:3px;border-radius:8px;margin-bottom:11px}.trip button{border:0;background:transparent;color:#aaa;border-radius:6px;padding:10px;font-size:9px;font-weight:800;cursor:pointer}.trip button.active{background:var(--gold);color:#111}
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:9px}.field.full{grid-column:1/-1}.field label{display:block;text-transform:uppercase;font-size:8px;letter-spacing:.10em;color:#aeb0b1;font-weight:700;margin:0 0 5px 2px}.field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,.13);border-radius:8px;background:rgba(255,255,255,.075);color:#fff;min-height:44px;padding:0 11px;font-size:10px;outline:none}.field textarea{height:56px;padding:10px 11px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#777}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
 .submit{width:100%;margin-top:11px;min-height:48px;border:0;border-radius:8px;background:linear-gradient(135deg,#f0ca7e,#c99b50);color:#111;font-size:10px;font-weight:900;letter-spacing:.08em;cursor:pointer}.secure{text-align:center;color:#999;font-size:8px;margin-top:8px}.secure b{color:#ddd}
-.features{position:relative;z-index:6;max-width:1050px;margin:-3px auto 0;padding:16px 5% 23px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.13)}.feature{display:flex;align-items:center;justify-content:center;gap:9px;border-right:1px solid rgba(255,255,255,.13)}.feature:last-child{border:0}.feature .icon{font-size:21px;color:var(--gold)}.feature b{display:block;font-size:9px;letter-spacing:.08em}.feature span{display:block;color:#999;font-size:8px;margin-top:2px}
+.features{position:relative;z-index:6;max-width:1050px;margin:-3px auto 0;padding:16px 5% 23px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.13)}.feature{display:flex;align-items:center;justify-content:center;gap:8px;border-right:1px solid rgba(255,255,255,.13);min-width:0}.feature b{white-space:nowrap}.feature:last-child{border:0}.feature .icon{font-size:21px;color:var(--gold)}.feature b{display:block;font-size:9px;letter-spacing:.08em}.feature span{display:block;color:#999;font-size:8px;margin-top:2px}
 .section{background:#f5f1e8;color:#141616;padding:88px 6%}.section-inner{max-width:1180px;margin:auto}.kicker{font-size:9px;color:#ad8445;letter-spacing:.25em;font-weight:800;margin-bottom:13px}.section h2{font:500 clamp(39px,5vw,62px)/1.02 "Playfair Display",serif}.section h2 i{color:#ad8445}.lead{max-width:680px;color:#6e6b66;font-size:14px;line-height:1.7;margin:18px 0 32px}.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.card{background:#fff;border:1px solid #e1dbcf;border-radius:14px;overflow:hidden}.cardimg{height:150px;background:linear-gradient(135deg,#b48c54,#252525);display:flex;align-items:flex-end;padding:13px;color:#fff;font:500 21px "Playfair Display",serif}.card:nth-child(1) .cardimg{background:linear-gradient(135deg,#5b3825,#d9a45b)}.card:nth-child(2) .cardimg{background:linear-gradient(135deg,#2d2430,#b78b61)}.card:nth-child(3) .cardimg{background:linear-gradient(135deg,#46352b,#e5b86f)}.card:nth-child(4) .cardimg{background:linear-gradient(135deg,#2386a0,#e9d29b)}.card:nth-child(5) .cardimg{background:linear-gradient(135deg,#18191b,#a97742)}.cardbody{padding:12px}.cardbody p{font-size:10px;line-height:1.5;color:#777}
 .dark{background:#090d10;color:#fff;padding:80px 6%}.darkinner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.dark h2{font:500 clamp(38px,5vw,60px)/1.02 "Playfair Display",serif}.dark h2 i{color:var(--gold2)}.dark p{color:#aeb3b5;font-size:14px;line-height:1.7;margin:17px 0 23px}
 footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-between;color:#777;font-size:8px}footer strong{color:#eee;letter-spacing:.18em}
@@ -51,23 +51,6 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
  .dark{padding:62px 18px}.darkinner{grid-template-columns:1fr;gap:15px}.dark h2{font-size:40px}footer{display:block;padding:24px 18px}footer span{display:block;margin-top:7px}.wa{right:10px;bottom:10px;font-size:7px}
 }
 @media(max-width:380px){.occasion-grid button{min-height:52px;font-size:6.5px}.occasion-grid button strong{font-size:13px}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.hero-inner{padding-top:41svh}}
-
-/* REAL SITE IMAGE CARDS */
-.cardimg{position:relative;background-size:cover!important;background-position:center!important;overflow:hidden}
-.cardimg:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.72),rgba(0,0,0,.05) 70%);pointer-events:none}
-.cardimg span{position:relative;z-index:2}
-
-
-@media(max-width:650px){.visual-strip{padding:0 18px 55px;grid-template-columns:1fr}.visual-card{height:210px}}
-
-
-/* SPECIAL OCCASION CARDS — REAL IMAGES */
-.cardimg{position:relative;height:185px!important;background-size:cover!important;background-position:center!important;overflow:hidden;display:flex!important;align-items:flex-end!important;padding:14px!important}
-.cardimg:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.78),rgba(0,0,0,.04) 72%);pointer-events:none}
-.cardimg span{position:relative;z-index:2;color:#fff;font:500 22px "Playfair Display",serif;text-shadow:0 2px 12px rgba(0,0,0,.55)}
-.card{transition:transform .25s ease,box-shadow .25s ease}.card:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(0,0,0,.14)}
-@media(max-width:650px){.cards{grid-template-columns:1fr!important;gap:12px}.cardimg{height:190px!important}.card:nth-child(5){grid-column:auto!important}}
-
 </style>
 </head>
 <body>
@@ -126,10 +109,10 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
 </div>
 
 <div class="features">
-<div class="feature"><div class="icon">◎</div><div><b>WORLDWIDE</b><span>Special destinations</span></div></div>
-<div class="feature"><div class="icon">◇</div><div><b>FLEXIBLE</b><span>Your flight, your time</span></div></div>
-<div class="feature"><div class="icon">♛</div><div><b>VIP</b><span>Ground services</span></div></div>
-<div class="feature"><div class="icon">◷</div><div><b>24/7</b><span>Dedicated support</span></div></div>
+<div class="feature"><div class="icon">◎</div><b>WORLDWIDE</b></div>
+<div class="feature"><div class="icon">◇</div><b>FLEXIBLE</b></div>
+<div class="feature"><div class="icon">♛</div><b>VIP</b></div>
+<div class="feature"><div class="icon">◷</div><b>24/7</b></div>
 </div>
 </section>
 
@@ -137,8 +120,14 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
 <div class="kicker">PRIVATE DAYS EXPERIENCES</div>
 <h2>Every celebration deserves<br><i>a higher experience.</i></h2>
 <p class="lead">Tell us what you are celebrating. Skyland Private will shape the flight and the details around your moment.</p>
-
-</article></div></div></section>
+<div class="cards">
+<article class="card"><div class="cardimg">Birthday</div><div class="cardbody"><p>Celebrate above the clouds in complete privacy.</p></div></article>
+<article class="card"><div class="cardimg">Marriage Proposal</div><div class="cardbody"><p>Create an unforgettable setting for the perfect question.</p></div></article>
+<article class="card"><div class="cardimg">Anniversary</div><div class="cardbody"><p>Turn your journey together into a memory.</p></div></article>
+<article class="card"><div class="cardimg">Honeymoon</div><div class="cardbody"><p>Begin your next chapter in extraordinary style.</p></div></article>
+<article class="card"><div class="cardimg">Special Celebration</div><div class="cardbody"><p>Make any milestone feel truly exceptional.</p></div></article>
+</div>
+</div></section>
 
 <section class="dark" id="contact"><div class="darkinner">
 <div><div class="kicker">YOUR MOMENT · YOUR FLIGHT</div><h2>Designed around you.<br><i>Down to every detail.</i></h2></div>
