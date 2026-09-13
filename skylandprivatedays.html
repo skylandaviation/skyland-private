@@ -106,149 +106,66 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
 </style>
 
 
-<style id="clean-mobile">
-@media (max-width:650px){
-  html,body{
-    width:100%;
+
+<style id="bottom-clamp">
+@media screen and (max-width:650px){
+  html{
+    display:block !important;
+    width:100% !important;
     height:auto !important;
     min-height:0 !important;
+    max-height:none !important;
     margin:0 !important;
     padding:0 !important;
     overflow-x:hidden !important;
-  }
-
-  body{
     overflow-y:auto !important;
   }
-
-  .hero{
-    width:100%;
+  body{
+    display:block !important;
+    width:100% !important;
     height:auto !important;
     min-height:0 !important;
+    max-height:none !important;
+    margin:0 !important;
+    padding:0 !important;
     overflow:visible !important;
-    background-color:#090b0c !important;
-    background-position:center top !important;
-    background-size:auto 300px !important;
   }
 
-  .hero:after{
-    inset:0 0 auto 0 !important;
-    height:300px !important;
-    pointer-events:none;
-  }
-
-  .nav{
-    height:62px !important;
-    padding:0 14px !important;
-  }
-
-  .hero-inner{
-    width:100% !important;
-    max-width:none !important;
-    height:auto !important;
-    min-height:0 !important;
-    margin:0 !important;
-    padding:300px 10px 0 !important;
-    display:block !important;
-  }
-
-  .hero-copy{display:none !important}
-
-  .form-shell{
-    width:100% !important;
-    height:auto !important;
-    min-height:0 !important;
-  }
-
-  .form-card{
-    width:100% !important;
-    height:auto !important;
-    min-height:0 !important;
-    padding:14px 11px 12px !important;
-  }
-
-  .occasion-grid{
-    grid-template-columns:repeat(5,1fr) !important;
-  }
-
-  .fields{
-    grid-template-columns:1fr 1fr !important;
-  }
-
-  .field.full{
-    grid-column:1/-1 !important;
-  }
-
-  .features{
-    width:100% !important;
-    height:auto !important;
-    min-height:0 !important;
-    margin:0 !important;
-    padding:15px 9px 20px !important;
-    grid-template-columns:repeat(2,1fr) !important;
-  }
-
-  .experiences-new{
-    width:100% !important;
-    height:auto !important;
-    min-height:0 !important;
-    margin:0 !important;
-    padding:55px 14px 30px !important;
-  }
-
-  .section-inner{
-    width:100% !important;
-    height:auto !important;
-    min-height:0 !important;
-  }
-
-  .experience-head{
-    display:block !important;
-    margin-bottom:24px !important;
-  }
-
-  .experience-grid{
-    width:100% !important;
-    height:auto !important;
-    min-height:0 !important;
-    grid-template-columns:1fr 1fr !important;
-    grid-auto-rows:175px !important;
-    gap:8px !important;
-  }
-
-  .experience-main{
-    grid-column:1/-1 !important;
-  }
-
-  .moment-banner{
-    width:100% !important;
-    height:auto !important;
-    min-height:0 !important;
-    margin-top:28px !important;
-  }
-
+  .hero,
+  .hero-inner,
+  .form-shell,
+  .form-card,
+  .features,
+  .experiences-new,
+  .section-inner,
+  .experience-grid,
+  .moment-banner,
   footer{
-    display:block !important;
-    width:100% !important;
     height:auto !important;
     min-height:0 !important;
-    margin:0 !important;
-    padding:24px 18px !important;
+    max-height:none !important;
   }
 
+  .hero{overflow:visible !important}
+  .hero-inner{padding-top:300px !important;padding-bottom:0 !important}
+  .experiences-new{padding-bottom:30px !important}
+  footer{margin:0 !important;padding-bottom:24px !important}
+
+  /* Absolutely positioned/fixed elements cannot create document height. */
+  .nav,
+  .hero:after,
+  .wa{
+    position:absolute !important;
+  }
   .wa{
     position:fixed !important;
-    right:10px !important;
-    bottom:10px !important;
-    z-index:1000 !important;
   }
-}
 
-@media (max-width:380px){
-  .hero-inner{padding-top:300px !important}
-  .fields{grid-template-columns:1fr !important}
-  .field.full{grid-column:auto !important}
-  .experience-grid{grid-auto-rows:160px !important}
+  /* Eliminate any accidental final whitespace/line box contribution. */
+  body:after{
+    content:none !important;
+    display:none !important;
+  }
 }
 </style>
 
