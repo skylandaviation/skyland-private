@@ -334,6 +334,26 @@ body{overflow-x:hidden}
 @media(max-width:900px){.business-grid{grid-template-columns:1fr 1fr}.business-box{min-height:330px}}
 @media(max-width:650px){.business-grid{grid-template-columns:1fr 1fr;gap:10px}.business-box{min-height:280px;border-radius:13px!important}.business-box .card-content{padding:16px 14px}.business-box .num{margin-bottom:34px}.business-box h3{font-size:20px!important}.business-box p{font-size:11px!important}.business-box h3:after{width:22px;margin-left:7px}}
 @media(max-width:430px){.business-grid{grid-template-columns:1fr}.business-box{min-height:320px}}
+
+/* FINAL INTERACTION + MOBILE DATE FIX */
+.business-box{display:block;text-decoration:none;cursor:pointer;color:inherit}
+.business-box:focus-visible{outline:2px solid #ead1a0;outline-offset:3px}
+html{scroll-padding-top:24px}
+.business-detail{padding-bottom:70px}
+.business-experience{padding-bottom:80px}
+.business-contact{padding-bottom:80px}
+.field input[type="date"]{-webkit-appearance:none;appearance:none;color-scheme:dark;min-width:0;position:relative}
+.field input[type="date"]::-webkit-calendar-picker-indicator{opacity:1;display:block;filter:invert(1) sepia(1) saturate(.45) hue-rotate(355deg);cursor:pointer;width:18px;height:18px;margin-right:2px}
+.field input[type="date"]::-webkit-datetime-edit{color:#fff}
+.field input[type="date"]::-webkit-datetime-edit-text{color:#aaa}
+.field input[type="date"]::-webkit-datetime-edit-month-field,.field input[type="date"]::-webkit-datetime-edit-day-field,.field input[type="date"]::-webkit-datetime-edit-year-field{color:#fff}
+@media(max-width:650px){
+  .field input[type="date"]{min-height:44px;padding-left:37px;padding-right:38px;font-size:11px}
+  .field input[type="date"]::-webkit-calendar-picker-indicator{opacity:1;display:block;width:17px;height:17px;margin-right:5px}
+  .business-detail{padding-bottom:55px}
+  .business-experience{padding-bottom:60px}
+  .business-contact{padding-bottom:60px}
+}
 </style>
 </head>
 <body>
@@ -362,22 +382,22 @@ body{overflow-x:hidden}
     <h2 data-i18n="whyTitle">Travel smarter.<br><i>Arrive ready.</i></h2>
     <p class="business-lead" data-i18n="whyLead">Your schedule should define your journey. Skyland Private combines worldwide access, flexible departure times and discreet service to keep your business moving.</p>
     <div class="business-grid">
-      <article class="business-box">
+      <a class="business-box" href="#quote" aria-label="Save Time">
         <div class="card-img" style="background-image:url('save-time.jpg')"></div><div class="card-overlay"></div>
         <div class="card-content"><span class="num">01</span><h3 data-i18n="box1h">Save Time</h3><p data-i18n="box1p">Skip queues, connections and unnecessary airport waiting.</p></div>
-      </article>
-      <article class="business-box">
+      </a>
+      <a class="business-box" href="#quote" aria-label="Total Privacy">
         <div class="card-img" style="background-image:url('total-privacy.jpg')"></div><div class="card-overlay"></div>
         <div class="card-content"><span class="num">02</span><h3 data-i18n="box2h">Total Privacy</h3><p data-i18n="box2p">Confidential travel coordination designed around your business.</p></div>
-      </article>
-      <article class="business-box">
+      </a>
+      <a class="business-box" href="#quote" aria-label="Worldwide Access">
         <div class="card-img" style="background-image:url('worldwide-access.jpg')"></div><div class="card-overlay"></div>
         <div class="card-content"><span class="num">03</span><h3 data-i18n="box3h">Worldwide Access</h3><p data-i18n="box3p">Reach major business destinations and regional airports with ease.</p></div>
-      </article>
-      <article class="business-box">
+      </a>
+      <a class="business-box" href="#quote" aria-label="Dedicated Support">
         <div class="card-img" style="background-image:url('dedicated-support.jpg')"></div><div class="card-overlay"></div>
         <div class="card-content"><span class="num">04</span><h3 data-i18n="box4h">Dedicated Support</h3><p data-i18n="box4p">A dedicated aviation team available before, during and after your flight.</p></div>
-      </article>
+      </a>
     </div>
    </div>
 </section>
