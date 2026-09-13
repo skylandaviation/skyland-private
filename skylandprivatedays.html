@@ -264,11 +264,11 @@ linear-gradient(135deg,#28221d,#80613c);border:1px solid rgba(255,255,255,.10)}
 radial-gradient(circle at 70% 25%,rgba(240,211,154,.24),transparent 34%),
 linear-gradient(135deg,rgba(255,255,255,.04),transparent 55%);transition:transform .5s ease}
 .experience-card:hover:before{transform:scale(1.05)}
-.experience-main{background-image:url("skyland_private_days_gorseller/01_birthday.jpg");background-size:cover;background-position:center;grid-column:span 7;grid-row:span 2;background:linear-gradient(145deg,#17191b,#9b774b)}
-.proposal{background-image:url("skyland_private_days_gorseller/02_marriage_proposal.jpg");background-size:cover;background-position:center;grid-column:span 5;background:linear-gradient(145deg,#1b1720,#805e54)}
-.anniversary{background-image:url("skyland_private_days_gorseller/03_anniversary.jpg");background-size:cover;background-position:center;grid-column:span 5;background:linear-gradient(145deg,#2a211c,#a17a4e)}
-.honeymoon{background-image:url("skyland_private_days_gorseller/04_honeymoon.jpg");background-size:cover;background-position:center;grid-column:span 5;background:linear-gradient(145deg,#102128,#628b91)}
-.celebration{background-image:url("skyland_private_days_gorseller/05_special_celebration.jpg");background-size:cover;background-position:center;grid-column:span 5;background:linear-gradient(145deg,#17191b,#75604a)}
+.experience-main{grid-column:span 7;grid-row:span 2;background:linear-gradient(145deg,#17191b,#9b774b)}
+.proposal{grid-column:span 5;background:linear-gradient(145deg,#1b1720,#805e54)}
+.anniversary{grid-column:span 5;background:linear-gradient(145deg,#2a211c,#a17a4e)}
+.honeymoon{grid-column:span 5;background:linear-gradient(145deg,#102128,#628b91)}
+.celebration{grid-column:span 5;background:linear-gradient(145deg,#17191b,#75604a)}
 .experience-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.82),transparent 65%)}
 .experience-content{position:absolute;left:22px;right:22px;bottom:20px;z-index:2}
 .experience-content span{font-size:8px;letter-spacing:.2em;color:var(--gold2);font-weight:800}
@@ -379,14 +379,6 @@ document.getElementById('lang').addEventListener('click',()=>{
  const tr=document.documentElement.lang==='tr'; document.documentElement.lang=tr?'en':'tr';
  document.getElementById('lang').textContent=tr?'EN ▾':'TR ▾';
 });
-
-document.querySelectorAll('.experience-card').forEach(card=>{
-  card.addEventListener('click',()=>{
-    const q=document.getElementById('quote');
-    if(q) setTimeout(()=>q.scrollIntoView({behavior:'smooth',block:'start'}),20);
-  });
-});
-
 </script>
 </body>
 </html>
