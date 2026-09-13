@@ -123,23 +123,147 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
 </style>
 
 <style id="mobile-bottom-fix">
+/* FINAL MOBILE HEIGHT FIX
+   Mobilde sayfanın içerik bittikten sonra fazladan scroll alanı üretmesini engeller. */
 @media (max-width:650px){
-  html{height:auto !important;min-height:0 !important;overflow-x:hidden !important;overflow-y:auto !important;scroll-padding-top:62px !important;}
-  body{height:auto !important;min-height:0 !important;width:100% !important;margin:0 !important;padding:0 !important;overflow-x:hidden !important;overflow-y:visible !important;}
-  .hero{height:auto !important;min-height:0 !important;overflow:visible !important;background-image:none !important;background:#090b0c !important;}
-  .hero:before{content:"";display:block;position:absolute;z-index:0;top:0;left:0;right:0;height:300px;background:url("private-days-hero.png") center top/cover no-repeat;}
-  .hero:after{z-index:1 !important;inset:0 0 auto 0 !important;height:300px !important;background:linear-gradient(0deg,#090b0c 0%,rgba(9,11,12,.03) 48%,rgba(9,11,12,.25) 100%) !important;}
-  .nav{z-index:20 !important;}
-  .hero-inner{z-index:5 !important;display:block !important;height:auto !important;min-height:0 !important;margin:0 !important;padding:300px 10px 0 !important;}
+  html{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    overflow-x:hidden !important;
+    overflow-y:scroll !important;
+  }
+
+  body{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    overflow-x:hidden !important;
+    overflow-y:visible !important;
+    overscroll-behavior-y:none !important;
+  }
+
+  /* Hero artık viewport yüksekliğine bağlı değil. */
+  .hero{
+    position:relative !important;
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    overflow:visible !important;
+    background:#090b0c !important;
+  }
+
+  /* Sadece üstteki uçak görseli sabit bir görsel alanı oluşturur. */
+  .hero:before{
+    content:"" !important;
+    display:block !important;
+    position:absolute !important;
+    z-index:0 !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    height:300px !important;
+    background:url("private-days-hero.png") center top/cover no-repeat !important;
+  }
+
+  .hero:after{
+    z-index:1 !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:auto !important;
+    height:300px !important;
+    background:linear-gradient(0deg,#090b0c 0%,rgba(9,11,12,.03) 48%,rgba(9,11,12,.25) 100%) !important;
+  }
+
+  .nav{
+    position:absolute !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    z-index:20 !important;
+  }
+
+  .hero-inner{
+    position:relative !important;
+    z-index:5 !important;
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    height:auto !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:300px 10px 0 !important;
+  }
+
+  .hero-copy{display:none !important;}
   .form-shell{width:100% !important;height:auto !important;}
-  .form-card{height:auto !important;min-height:0 !important;}
-  .features{height:auto !important;min-height:0 !important;margin:0 !important;}
-  .experiences-new{height:auto !important;min-height:0 !important;margin:0 !important;padding-bottom:30px !important;}
-  .section-inner{height:auto !important;min-height:0 !important;}
-  .experience-grid{height:auto !important;min-height:0 !important;}
-  .moment-banner{height:auto !important;min-height:0 !important;}
-  footer{height:auto !important;min-height:0 !important;margin:0 !important;padding-bottom:24px !important;}
-  .wa{position:fixed !important;}
+  .form-card{width:100% !important;height:auto !important;min-height:0 !important;}
+
+  .features{
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    margin:0 !important;
+  }
+
+  .experiences-new{
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:55px 14px 30px !important;
+  }
+
+  .section-inner{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    margin:0 auto !important;
+  }
+
+  .experience-grid{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+  }
+
+  .moment-banner{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+  }
+
+  footer{
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:24px 18px !important;
+  }
+
+  /* Fixed WhatsApp but it never contributes to page height. */
+  .wa{
+    position:fixed !important;
+    z-index:1000 !important;
+    right:10px !important;
+    bottom:10px !important;
+  }
+}
+
+/* Çok küçük telefonlarda da viewport yüksekliği kullanılmaz. */
+@media (max-width:380px){
+  .hero-inner{padding-top:300px !important;}
 }
 </style>
 </head>
@@ -407,6 +531,20 @@ document.getElementById('lang').addEventListener('click',()=>{
  const tr=document.documentElement.lang==='tr'; document.documentElement.lang=tr?'en':'tr';
  document.getElementById('lang').textContent=tr?'EN ▾':'TR ▾';
 });
+/* Final mobile scroll-height guard */
+(function(){
+  function mobileHeightGuard(){
+    if(window.innerWidth <= 650){
+      document.documentElement.style.marginBottom = "0";
+      document.body.style.marginBottom = "0";
+      document.body.style.paddingBottom = "0";
+      document.body.style.minHeight = "0";
+    }
+  }
+  window.addEventListener("load", mobileHeightGuard, {passive:true});
+  window.addEventListener("resize", mobileHeightGuard, {passive:true});
+  mobileHeightGuard();
+})();
 </script>
 </body>
 </html>
