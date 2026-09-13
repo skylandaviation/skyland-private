@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
 :root{--gold:#d5ad64;--gold2:#f0d39a;--black:#07090a;--panel:rgba(8,10,11,.91);--line:rgba(225,194,132,.36);--white:#fff;--muted:#a9acae}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;background:var(--black);color:#fff;overflow-x:hidden}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:78px}body{font-family:"DM Sans",sans-serif;background:var(--black);color:#fff;overflow-x:hidden}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
 .hero{position:relative;min-height:100svh;background:#080a0b url("private-days-hero.png") center/cover no-repeat;overflow:hidden}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,5,6,.78),rgba(3,5,6,.25) 58%,rgba(3,5,6,.18)),linear-gradient(0deg,rgba(3,5,6,.88) 0%,transparent 42%,rgba(3,5,6,.20));pointer-events:none}
 .nav{position:absolute;top:0;left:0;right:0;height:82px;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(0,0,0,.42),transparent)}
@@ -34,6 +34,68 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
 .wa{position:fixed;right:16px;bottom:14px;z-index:100;background:#1dbb5b;color:#fff;padding:9px 12px;border-radius:999px;font-size:8px;font-weight:800}
 
 @media(max-width:1000px){.navlinks{display:none}.hero-inner{gap:3vw}.hero-copy{max-width:410px}.form-shell{width:min(550px,52vw)}.hero h1{font-size:51px}.cards{grid-template-columns:repeat(3,1fr)}}
+
+/* Premium service highlights */
+.features{
+  position:relative;
+  z-index:10;
+  max-width:1180px;
+  margin:0 auto;
+  padding:20px 14px 22px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border:1px solid rgba(213,173,100,.30);
+  border-radius:18px;
+  background:linear-gradient(120deg,rgba(213,173,100,.09),rgba(255,255,255,.025));
+  box-shadow:0 20px 55px rgba(0,0,0,.25);
+}
+.feature{
+  min-height:92px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border-right:1px solid rgba(255,255,255,.15);
+  padding:6px 10px;
+}
+.feature:last-child{border-right:0}
+.feature .icon{
+  font-size:29px;
+  line-height:1;
+  color:var(--gold2);
+  filter:drop-shadow(0 4px 12px rgba(213,173,100,.22));
+}
+.feature b{
+  color:#fff;
+  font-size:12px;
+  letter-spacing:.15em;
+  font-weight:900;
+}
+
+/* Larger WhatsApp Support button */
+.wa{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  background:#19b956;
+  color:#fff;
+  padding:13px 20px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.07em;
+  box-shadow:0 10px 30px rgba(0,0,0,.42);
+  border:2px solid rgba(255,255,255,.14);
+}
+.wa:before{content:"◉";font-size:18px;line-height:1}
+.wa:hover{transform:translateY(-2px)}
+
 @media(max-width:650px){
  .hero{background-position:center top;background-size:auto 56svh;min-height:auto;background-color:#090b0c}
  .hero:after{background:linear-gradient(0deg,#090b0c 0%,rgba(9,11,12,.04) 43%,rgba(9,11,12,.25) 100%)}
@@ -128,50 +190,50 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
     </div>
 
     <div class="experience-grid">
-      <article class="experience-card experience-main">
+      <a class="experience-card experience-main" href="#quote" aria-label="Plan your private day">
         <div class="experience-overlay"></div>
         <div class="experience-content">
           <span>01</span>
           <h3>Birthday</h3>
           <p>Celebrate above the clouds with complete privacy, comfort and personal service.</p>
         </div>
-      </article>
+      </a>
 
-      <article class="experience-card proposal">
+      <a class="experience-card proposal" href="#quote" aria-label="Plan your private day">
         <div class="experience-overlay"></div>
         <div class="experience-content">
           <span>02</span>
           <h3>Marriage Proposal</h3>
           <p>Turn the most important question into a moment they will never forget.</p>
         </div>
-      </article>
+      </a>
 
-      <article class="experience-card anniversary">
+      <a class="experience-card anniversary" href="#quote" aria-label="Plan your private day">
         <div class="experience-overlay"></div>
         <div class="experience-content">
           <span>03</span>
           <h3>Anniversary</h3>
           <p>Celebrate your story together in a setting made exclusively for you.</p>
         </div>
-      </article>
+      </a>
 
-      <article class="experience-card honeymoon">
+      <a class="experience-card honeymoon" href="#quote" aria-label="Plan your private day">
         <div class="experience-overlay"></div>
         <div class="experience-content">
           <span>04</span>
           <h3>Honeymoon</h3>
           <p>Start your next chapter with a journey that feels truly extraordinary.</p>
         </div>
-      </article>
+      </a>
 
-      <article class="experience-card celebration">
+      <a class="experience-card celebration" href="#quote" aria-label="Plan your private day">
         <div class="experience-overlay"></div>
         <div class="experience-content">
           <span>05</span>
           <h3>Special Celebration</h3>
           <p>Birthdays, milestones, surprises or simply a reason to celebrate.</p>
         </div>
-      </article>
+      </a>
     </div>
 
     <div class="moment-banner">
@@ -195,18 +257,18 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
 .experiences-new h2 i{color:var(--gold2)}
 .experiences-new .lead{margin:0;max-width:500px;color:#aeb3b5;font-size:14px;line-height:1.8}
 .experience-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:205px;gap:12px}
-.experience-card{position:relative;overflow:hidden;border-radius:16px;min-width:0;background:
+.experience-card{position:relative;display:block;color:inherit;text-decoration:none;cursor:pointer;overflow:hidden;border-radius:16px;min-width:0;background:
 linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.82)),
 linear-gradient(135deg,#28221d,#80613c);border:1px solid rgba(255,255,255,.10)}
 .experience-card:before{content:"";position:absolute;inset:0;background:
 radial-gradient(circle at 70% 25%,rgba(240,211,154,.24),transparent 34%),
 linear-gradient(135deg,rgba(255,255,255,.04),transparent 55%);transition:transform .5s ease}
 .experience-card:hover:before{transform:scale(1.05)}
-.experience-main{grid-column:span 7;grid-row:span 2;background:linear-gradient(145deg,#17191b,#9b774b)}
-.proposal{grid-column:span 5;background:linear-gradient(145deg,#1b1720,#805e54)}
-.anniversary{grid-column:span 5;background:linear-gradient(145deg,#2a211c,#a17a4e)}
-.honeymoon{grid-column:span 5;background:linear-gradient(145deg,#102128,#628b91)}
-.celebration{grid-column:span 5;background:linear-gradient(145deg,#17191b,#75604a)}
+.experience-main{background-image:url("skyland_private_days_gorseller/01_birthday.jpg");background-size:cover;background-position:center;grid-column:span 7;grid-row:span 2;background:linear-gradient(145deg,#17191b,#9b774b)}
+.proposal{background-image:url("skyland_private_days_gorseller/02_marriage_proposal.jpg");background-size:cover;background-position:center;grid-column:span 5;background:linear-gradient(145deg,#1b1720,#805e54)}
+.anniversary{background-image:url("skyland_private_days_gorseller/03_anniversary.jpg");background-size:cover;background-position:center;grid-column:span 5;background:linear-gradient(145deg,#2a211c,#a17a4e)}
+.honeymoon{background-image:url("skyland_private_days_gorseller/04_honeymoon.jpg");background-size:cover;background-position:center;grid-column:span 5;background:linear-gradient(145deg,#102128,#628b91)}
+.celebration{background-image:url("skyland_private_days_gorseller/05_special_celebration.jpg");background-size:cover;background-position:center;grid-column:span 5;background:linear-gradient(145deg,#17191b,#75604a)}
 .experience-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.82),transparent 65%)}
 .experience-content{position:absolute;left:22px;right:22px;bottom:20px;z-index:2}
 .experience-content span{font-size:8px;letter-spacing:.2em;color:var(--gold2);font-weight:800}
@@ -217,6 +279,68 @@ linear-gradient(135deg,rgba(255,255,255,.04),transparent 55%);transition:transfo
 .moment-right p{color:#aeb3b5;font-size:12px;line-height:1.75;margin:0 0 20px}
 .premium-cta{display:inline-flex;align-items:center;gap:18px;background:linear-gradient(135deg,#f0ca7e,#c99b50);color:#111;border-radius:8px;padding:14px 18px;font-size:9px;font-weight:900;letter-spacing:.08em}
 .premium-cta b{font-size:15px}
+
+/* Premium service highlights */
+.features{
+  position:relative;
+  z-index:10;
+  max-width:1180px;
+  margin:0 auto;
+  padding:20px 14px 22px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border:1px solid rgba(213,173,100,.30);
+  border-radius:18px;
+  background:linear-gradient(120deg,rgba(213,173,100,.09),rgba(255,255,255,.025));
+  box-shadow:0 20px 55px rgba(0,0,0,.25);
+}
+.feature{
+  min-height:92px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border-right:1px solid rgba(255,255,255,.15);
+  padding:6px 10px;
+}
+.feature:last-child{border-right:0}
+.feature .icon{
+  font-size:29px;
+  line-height:1;
+  color:var(--gold2);
+  filter:drop-shadow(0 4px 12px rgba(213,173,100,.22));
+}
+.feature b{
+  color:#fff;
+  font-size:12px;
+  letter-spacing:.15em;
+  font-weight:900;
+}
+
+/* Larger WhatsApp Support button */
+.wa{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  background:#19b956;
+  color:#fff;
+  padding:13px 20px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.07em;
+  box-shadow:0 10px 30px rgba(0,0,0,.42);
+  border:2px solid rgba(255,255,255,.14);
+}
+.wa:before{content:"◉";font-size:18px;line-height:1}
+.wa:hover{transform:translateY(-2px)}
+
 @media(max-width:650px){
   .experiences-new{padding:55px 14px 30px}
   .experience-head{display:block;margin-bottom:24px}
@@ -240,7 +364,7 @@ linear-gradient(135deg,rgba(255,255,255,.04),transparent 55%);transition:transfo
 }
 </style>
 <footer><strong>SKYLAND PRIVATE JET</strong><span>© 2026 Skyland Private · Private Days · Confidential Flight Requests</span></footer>
-<a class="wa" href="https://wa.me/905309918804" target="_blank" rel="noopener">WHATSAPP · +90 530 991 88 04</a>
+<a class="wa" href="https://wa.me/905309918804" target="_blank" rel="noopener">WHATSAPP SUPPORT</a>
 
 <script>
 const form=document.getElementById('specialForm'),tripType=document.getElementById('tripType'),ret=document.getElementById('return'),dep=document.getElementById('departure'),occasion=document.getElementById('occasionValue');
@@ -255,6 +379,14 @@ document.getElementById('lang').addEventListener('click',()=>{
  const tr=document.documentElement.lang==='tr'; document.documentElement.lang=tr?'en':'tr';
  document.getElementById('lang').textContent=tr?'EN ▾':'TR ▾';
 });
+
+document.querySelectorAll('.experience-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const q=document.getElementById('quote');
+    if(q) setTimeout(()=>q.scrollIntoView({behavior:'smooth',block:'start'}),20);
+  });
+});
+
 </script>
 </body>
 </html>
