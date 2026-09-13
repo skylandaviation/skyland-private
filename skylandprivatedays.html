@@ -116,24 +116,129 @@ footer{padding:28px 6%;background:#050708;display:flex;justify-content:space-bet
 </div>
 </section>
 
-<section class="section" id="experiences"><div class="section-inner">
-<div class="kicker">PRIVATE DAYS EXPERIENCES</div>
-<h2>Every celebration deserves<br><i>a higher experience.</i></h2>
-<p class="lead">Tell us what you are celebrating. Skyland Private will shape the flight and the details around your moment.</p>
-<div class="cards">
-<article class="card"><div class="cardimg">Birthday</div><div class="cardbody"><p>Celebrate above the clouds in complete privacy.</p></div></article>
-<article class="card"><div class="cardimg">Marriage Proposal</div><div class="cardbody"><p>Create an unforgettable setting for the perfect question.</p></div></article>
-<article class="card"><div class="cardimg">Anniversary</div><div class="cardbody"><p>Turn your journey together into a memory.</p></div></article>
-<article class="card"><div class="cardimg">Honeymoon</div><div class="cardbody"><p>Begin your next chapter in extraordinary style.</p></div></article>
-<article class="card"><div class="cardimg">Special Celebration</div><div class="cardbody"><p>Make any milestone feel truly exceptional.</p></div></article>
-</div>
-</div></section>
 
-<section class="dark" id="contact"><div class="darkinner">
-<div><div class="kicker">YOUR MOMENT · YOUR FLIGHT</div><h2>Designed around you.<br><i>Down to every detail.</i></h2></div>
-<div><p>From the route to the celebration details, our private aviation team coordinates your experience with discretion, flexibility and personal attention.</p><a class="navcta" href="#quote">START PLANNING →</a></div>
-</div></section>
+<section class="section experiences-new" id="experiences">
+  <div class="section-inner">
+    <div class="experience-head">
+      <div>
+        <div class="kicker">PRIVATE DAYS EXPERIENCES</div>
+        <h2>One flight.<br><i>One unforgettable moment.</i></h2>
+      </div>
+      <p class="lead">Your special day deserves more than an ordinary journey. Tell us the occasion and we will design the experience around you.</p>
+    </div>
 
+    <div class="experience-grid">
+      <article class="experience-card experience-main">
+        <div class="experience-overlay"></div>
+        <div class="experience-content">
+          <span>01</span>
+          <h3>Birthday</h3>
+          <p>Celebrate above the clouds with complete privacy, comfort and personal service.</p>
+        </div>
+      </article>
+
+      <article class="experience-card proposal">
+        <div class="experience-overlay"></div>
+        <div class="experience-content">
+          <span>02</span>
+          <h3>Marriage Proposal</h3>
+          <p>Turn the most important question into a moment they will never forget.</p>
+        </div>
+      </article>
+
+      <article class="experience-card anniversary">
+        <div class="experience-overlay"></div>
+        <div class="experience-content">
+          <span>03</span>
+          <h3>Anniversary</h3>
+          <p>Celebrate your story together in a setting made exclusively for you.</p>
+        </div>
+      </article>
+
+      <article class="experience-card honeymoon">
+        <div class="experience-overlay"></div>
+        <div class="experience-content">
+          <span>04</span>
+          <h3>Honeymoon</h3>
+          <p>Start your next chapter with a journey that feels truly extraordinary.</p>
+        </div>
+      </article>
+
+      <article class="experience-card celebration">
+        <div class="experience-overlay"></div>
+        <div class="experience-content">
+          <span>05</span>
+          <h3>Special Celebration</h3>
+          <p>Birthdays, milestones, surprises or simply a reason to celebrate.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="moment-banner">
+      <div>
+        <div class="kicker">YOUR MOMENT · YOUR FLIGHT</div>
+        <h2>Designed around you.<br><i>Down to every detail.</i></h2>
+      </div>
+      <div class="moment-right">
+        <p>From the route and aircraft to flowers, cake, catering, transfers and every special detail, our team coordinates your private experience with discretion and personal attention.</p>
+        <a class="premium-cta" href="#quote">START PLANNING <b>→</b></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.experiences-new{background:#0a0d0f;color:#fff;padding:92px 6% 55px}
+.experiences-new .section-inner{max-width:1240px}
+.experience-head{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end;margin-bottom:38px}
+.experiences-new h2{font:500 clamp(42px,5vw,66px)/1.02 "Playfair Display",serif;letter-spacing:-.03em}
+.experiences-new h2 i{color:var(--gold2)}
+.experiences-new .lead{margin:0;max-width:500px;color:#aeb3b5;font-size:14px;line-height:1.8}
+.experience-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:205px;gap:12px}
+.experience-card{position:relative;overflow:hidden;border-radius:16px;min-width:0;background:
+linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.82)),
+linear-gradient(135deg,#28221d,#80613c);border:1px solid rgba(255,255,255,.10)}
+.experience-card:before{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 70% 25%,rgba(240,211,154,.24),transparent 34%),
+linear-gradient(135deg,rgba(255,255,255,.04),transparent 55%);transition:transform .5s ease}
+.experience-card:hover:before{transform:scale(1.05)}
+.experience-main{grid-column:span 7;grid-row:span 2;background:linear-gradient(145deg,#17191b,#9b774b)}
+.proposal{grid-column:span 5;background:linear-gradient(145deg,#1b1720,#805e54)}
+.anniversary{grid-column:span 5;background:linear-gradient(145deg,#2a211c,#a17a4e)}
+.honeymoon{grid-column:span 5;background:linear-gradient(145deg,#102128,#628b91)}
+.celebration{grid-column:span 5;background:linear-gradient(145deg,#17191b,#75604a)}
+.experience-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.82),transparent 65%)}
+.experience-content{position:absolute;left:22px;right:22px;bottom:20px;z-index:2}
+.experience-content span{font-size:8px;letter-spacing:.2em;color:var(--gold2);font-weight:800}
+.experience-content h3{font:500 27px/1.05 "Playfair Display",serif;margin:6px 0 7px}
+.experience-content p{font-size:10px;line-height:1.55;color:#d5d6d6;max-width:390px}
+.moment-banner{margin-top:55px;padding:42px 44px;border:1px solid rgba(213,173,100,.28);border-radius:18px;background:linear-gradient(120deg,rgba(213,173,100,.10),rgba(255,255,255,.025) 45%,rgba(0,0,0,.15));display:grid;grid-template-columns:1fr .8fr;gap:60px;align-items:center}
+.moment-banner h2{font-size:48px}
+.moment-right p{color:#aeb3b5;font-size:12px;line-height:1.75;margin:0 0 20px}
+.premium-cta{display:inline-flex;align-items:center;gap:18px;background:linear-gradient(135deg,#f0ca7e,#c99b50);color:#111;border-radius:8px;padding:14px 18px;font-size:9px;font-weight:900;letter-spacing:.08em}
+.premium-cta b{font-size:15px}
+@media(max-width:650px){
+  .experiences-new{padding:55px 14px 30px}
+  .experience-head{display:block;margin-bottom:24px}
+  .experiences-new h2{font-size:39px}
+  .experiences-new .lead{font-size:11px;line-height:1.65;margin-top:15px}
+  .experience-grid{grid-template-columns:1fr 1fr;grid-auto-rows:175px;gap:8px}
+  .experience-main{grid-column:1/-1;grid-row:span 1}
+  .proposal,.anniversary,.honeymoon,.celebration{grid-column:span 1}
+  .experience-content{left:14px;right:14px;bottom:14px}
+  .experience-content h3{font-size:21px;margin:5px 0}
+  .experience-content p{font-size:8px;line-height:1.45}
+  .moment-banner{margin-top:28px;padding:25px 18px;display:block;border-radius:14px}
+  .moment-banner h2{font-size:35px}
+  .moment-right p{font-size:10px;line-height:1.65;margin-top:15px}
+  .premium-cta{width:100%;justify-content:center}
+}
+@media(max-width:380px){
+  .experience-grid{grid-auto-rows:160px}
+  .experience-content h3{font-size:19px}
+  .experience-content p{font-size:7.5px}
+}
+</style>
 <footer><strong>SKYLAND PRIVATE JET</strong><span>© 2026 Skyland Private · Private Days · Confidential Flight Requests</span></footer>
 <a class="wa" href="https://wa.me/905309918804" target="_blank" rel="noopener">WHATSAPP · +90 530 991 88 04</a>
 
